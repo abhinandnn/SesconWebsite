@@ -566,28 +566,56 @@ video {
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
 }
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.mx-\[4vw\] {
+  margin-left: 4vw;
+  margin-right: 4vw;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.flex {
+  display: flex;
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.h-\[100vh\] {
+  height: 100vh;
 }
+.h-\[100rem\] {
+  height: 100rem;
+}
+.items-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-8 {
+  gap: 2rem;
+}
+.gap-\[\] {
+  gap: ;
+}
+.gap-\[2vw\] {
+  gap: 2vw;
+}
+.gap-\[4vw\] {
+  gap: 4vw;
+}
+.bg-\[\#0000004D\] {
+  background-color: #0000004D;
+}
+.px-\[4vw\] {
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+.pt-\[1rem\] {
+  padding-top: 1rem;
+}
+.text-\[1rem\] {
+  font-size: 1rem;
+}
+.font-bold {
+  font-weight: 700;
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
