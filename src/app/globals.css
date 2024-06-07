@@ -2,3 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+/* #ReactBackgroundSlider{
+    height: 100vh !important;
+} */
+:root{
+    background: black;
+}
+figure{
+    height: 100vh !important;
+    position: absolute !important;
+    top: 0 !important;
+    /* z-index: 0 !important; */
+}
