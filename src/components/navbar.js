@@ -7,25 +7,25 @@ function Navbar() {
         <div className='px-[4vw] z-20 pt-[1rem] flex justify-between'>
         <Image src={logo} alt="logo" />
         <div className='flex gap-[4vw] text-[1rem] text-white items-center font-bold'>
-<div>
+<div className=' cursor-pointer'>
 Home
 </div>
-<div>
+<div className=' cursor-pointer'>
 About
 </div>
-<div>
+<div className=' cursor-pointer'>
 Company
 </div>
-<div>
+<div className=' cursor-pointer'>
 EHS
 </div>
-<div>
+<div className=' cursor-pointer'>
 Projects
 </div>
-<div>
+<div className=' cursor-pointer'>
 Careers
 </div>
-<div>
+<div className=' cursor-pointer'>
 Contact
 </div>
  </div>
