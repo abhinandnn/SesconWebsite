@@ -8,6 +8,7 @@ import img3 from '@/assets/img3.svg'
 import Image from 'next/image'
 import Navbar from '@/components/navbar'
 import BackgroundSlider from 'react-background-slider'
+import SimpleImageSlider from "react-simple-image-slider";
 function Home() {
   return (
     <div className='font-lexend bg-transparent h-[100rem]'>
@@ -37,16 +38,22 @@ Sescon Builders Pvt. Ltd. is a revolutionary emergence in the field of civil co
 Our client's schedule and budget goals guide the decision making process. All projects regardless of scope or scale, commence with responsive analysis followed by the use of appropriately chosen, field – proven project management techniques to ensure projects delivery success.
 </div>
     </div>
-    <div className='bg-white pt-[4.5rem] px-[4vw] flex gap-[4rem]'>
+    <div className='bg-white pt-[4.5rem] px-[4vw] flex gap-[6rem]'>
       <div>
-
+      <SimpleImageSlider
+        width={785}
+        height={770}
+        images={['/img1.svg', '/img2.svg', '/img3.svg']}
+        slideDuration={0.5}
+        autoPlay={true}
+      />
       </div>
-      <div className='flex flex-col gap-[2rem]'>
+      <div className='flex flex-col gap-[4rem]'>
       <div>
         <div className='font-bold leading-tight text-[#B33F0F] text-[7.5rem]'>
 20+
         </div>
-        <div className='font-bold text-[2.5rem] pb-6 border-b border-black'>
+        <div className='font-bold text-[2.5rem] pb-6 border-b border-black w-[29rem]'>
         Year Experience
         </div>
       </div>
