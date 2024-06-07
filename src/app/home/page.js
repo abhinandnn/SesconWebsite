@@ -1,15 +1,34 @@
+'use client'
 import React from 'react'
 import axios from '@/api/axios'
 import logo from '@/assets/logo.svg'
+import img1 from '@/assets/img1.svg'
+import img2 from '@/assets/img2.svg'
+import img3 from '@/assets/img3.svg'
 import Image from 'next/image'
 import Navbar from '@/components/navbar'
+import BackgroundSlider from 'react-background-slider'
 function Home() {
   return (
-    <div className='font-lexend h-[100rem]'>
-    <div className='bg-[#0000004D] h-[100vh]'>
-<Navbar/>
+    <div className='font-lexend bg-transparent h-[100rem]'>
+    <div className='h-[100vh] bg-transparent text-white'>
+    <BackgroundSlider
+  images={['/img1.svg', '/img2.svg', '/img3.svg']}
+  duration={4} transition={2} />
+<Navbar />
+<div className='px-[4vw]'>
+  <div className='text-[2rem] pt-[5rem]'>
+    We Build Your
+  </div>
+  <div className='text-[10rem] leading-none font-bold'>
+    Dreams
+  </div>
+  <div className='text-[2rem]'>
+  We deliver what we commit and we commit what we can deliver
+  </div>
+</div>
     </div>
-    <div className='mt-[3rem] px-[4vw] flex gap-[4rem]'>
+    <div className='bg-white pt-[4.5rem] px-[4vw] flex gap-[6rem]'>
 <div className='text-[2.5rem] leading-none w-[8rem] min-w-fit text-[#B33F0F]'>
 ABOUT US
 </div>
@@ -18,7 +37,7 @@ Sescon Builders Pvt. Ltd. is a revolutionary emergence in the field of civil co
 Our client's schedule and budget goals guide the decision making process. All projects regardless of scope or scale, commence with responsive analysis followed by the use of appropriately chosen, field – proven project management techniques to ensure projects delivery success.
 </div>
     </div>
-    <div className='mt-[3rem] px-[4vw] flex gap-[4rem]'>
+    <div className='bg-white pt-[4.5rem] px-[4vw] flex gap-[4rem]'>
       <div>
 
       </div>
@@ -42,7 +61,7 @@ Our client's schedule and budget goals guide the decision making process. All pr
       </div>
 
     </div>
-    <div className='mt-[3rem] px-[4vw] flex gap-[4rem]'>
+    <div className='bg-white pt-[3rem] px-[4vw] flex gap-[4rem]'>
     <div className='text-[2.5rem] leading-none w-[8rem] min-w-fit text-[#B33F0F]'>
 FEATURED PROJECTS
 </div>

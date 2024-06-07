@@ -4,7 +4,7 @@ import Image from 'next/image'
 function Navbar() {
   return (
     <div>
-        <div className='px-[4vw] pt-[1rem] flex justify-between'>
+        <div className='px-[4vw] z-20 pt-[1rem] flex justify-between'>
         <Image src={logo} alt="logo" />
         <div className='flex gap-[4vw] text-[1rem] text-white items-center font-bold'>
 <div>
