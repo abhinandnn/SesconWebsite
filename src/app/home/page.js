@@ -12,6 +12,9 @@ import SimpleImageSlider from "react-simple-image-slider";
 import Achievement from "@/components/achievement";
 import Available from "@/components/available";
 import Clients from "@/components/clients";
+import AllCollapseExample from "@/components/faq";
+import Reach from "@/components/reach";
+import Footer from "@/components/footer";
 function Home() {
   return (
     <div className="font-lexend h-fit">
@@ -84,6 +87,9 @@ function Home() {
         <Achievement/>
         <Available/>
         <Clients/>
+        <AllCollapseExample/>
+        <Reach/>
+        <Footer/>
       
       
     </div>
