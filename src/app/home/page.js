@@ -9,9 +9,10 @@ import Image from 'next/image'
 import Navbar from '@/components/navbar'
 import BackgroundSlider from 'react-background-slider'
 import SimpleImageSlider from "react-simple-image-slider";
+import ProjectCard from '@/components/projectCard'
 function Home() {
   return (
-    <div className='font-lexend bg-transparent h-[100rem]'>
+    <div className='font-lexend bg-transparent min-h-[100rem]'>
     <div className='h-[100vh] bg-transparent text-white'>
     <BackgroundSlider
   images={['/img1.svg', '/img2.svg', '/img3.svg']}
@@ -68,9 +69,17 @@ Our client's schedule and budget goals guide the decision making process. All pr
       </div>
 
     </div>
-    <div className='bg-white pt-[3rem] px-[4vw] flex gap-[4rem]'>
+    <div className='bg-white pt-[3rem] px-[4vw] py-[4rem] flex flex-col gap-[4rem]'>
     <div className='text-[2.5rem] leading-none w-[8rem] min-w-fit text-[#B33F0F]'>
 FEATURED PROJECTS
+</div>
+<div className='flex gap-[2rem]'>
+<ProjectCard/>
+<ProjectCard/>
+<ProjectCard/>
+</div >
+<div className=''> 
+
 </div>
 </div>
     </div>
