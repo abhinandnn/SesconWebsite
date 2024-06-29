@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Reach = () => {
+const Reach = ({section}) => {
   return (
     <div className=' flex flex-col gap-[64px] px-[4vw] mb-[100px]'>
        <div className="text-[2.5rem] leading-none w-[8rem] font-[400] min-w-fit text-[#B33F0F]">
@@ -8,10 +8,10 @@ const Reach = () => {
       </div>
       <div className=' flex justify-between items-start flex-wrap '>
         <div>
-            <img src='/gujrat.svg' className=' pt-[70px]'/>
+          {section=="Home"?<img src='/gujrat.svg' className=' pt-[70px]'/>:<img src='/delhiAbout.svg' className=' pt-[70px]'/>}  
         </div>
         <div>
-        <img src='/delhi.svg'/>
+          {section=="Home"?<img src='/gujrat.svg' className=' pt-[70px]'/>:<img src='/gujratAbout.svg' className=' pt-[70px]'/>}  
         </div>
       </div>
     </div>

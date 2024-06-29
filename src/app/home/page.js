@@ -88,7 +88,7 @@ function Home() {
         <Available/>
         <Clients/>
         <AllCollapseExample/>
-        <Reach/>
+        <Reach section="Home"/>
        
       
       
