@@ -11,13 +11,17 @@ function Navbar() {
       <div className="px-[4vw] z-20 pt-[1rem] flex justify-between">
         <Image src={logo} alt="logo" />
         <div className={`flex gap-[4vw] text-[1rem] ${pathname=="/ongoing"?"text-black":"text-white"}  items-center font-bold`}>
+        <Link href="/home">
           <div className=" cursor-pointer">Home</div>
+          </Link>
           <Link href="/about">
             <div className=" cursor-pointer">About</div>
           </Link>
 
           <div className=" cursor-pointer">Company</div>
-          <div className=" cursor-pointer">EHS</div>
+          <Link href="/ehs">
+            <div className=" cursor-pointer">EHS</div>
+          </Link>
           <div className=" cursor-pointer">Projects</div>
           <div className=" cursor-pointer">Careers</div>
           <div className=" cursor-pointer">Contact</div>
