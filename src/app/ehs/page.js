@@ -16,6 +16,8 @@ import Clients from "@/components/clients";
 import AllCollapseExample from "@/components/faq";
 import Reach from "@/components/reach";
 import Footer from "@/components/footer";
+import { ehsData } from "@/data/ehsData";
+
 function Home() {
   return (
     <div className="font-lexend h-fit">
@@ -64,7 +66,23 @@ Comply with all relevant and applicable statutory provisions pertaining to Envir
         </div>
             <img src="/SBSO.svg"/>
         </div>
-            
+        <div className=" px-[4vw] text-[1.5rem]">
+          {ehsData.map((item, index) => (
+            <div className={`flex relative justify-between mb-[74px] ${index%2!=0?"":"flex-row-reverse"}`}>
+              <div className="  w-[43.7%] min-w-[670px]">
+                <img className={`w-full scale-90`} src={item.img} />
+                <img className={` absolute top-[-72px] ${index==0&&"hidden"} ${index%2!=0?"rotate-180":""} ${index%2!=0?"left-0":"right-0"}`} src="/line.svg"/>
+              </div>
+              <div className=" pt-6 pb-6 flex flex-col gap-4 w-[40.27%]">
+                <div>
+                  {/* <img src={item.logo} /> */}
+                </div>
+                <div className="text-[2rem] text-[#B33F0F] font-semibold">{item.title}</div>
+                <div className=" self-end text-black mt-8 font-medium leading-8">{item.description}</div>
+              </div>
+            </div>
+          ))}
+        </div>
     </div>
   );
 }
