@@ -24,7 +24,7 @@ function AllCollapseExample() {
     ],
   };
   return (
-    <div className=" w-11/12 mx-auto px-[4vw] flex justify-between items-start mb-[100px] md1:flex-col">
+    <div className=" w-11/12 mx-auto  flex justify-between items-start mb-[100px] md1:flex-col">
       <div className="text-[2.5rem] leading-none w-[8rem] font-[400] min-w-fit text-[#B33F0F] pt-3 pr-5">
         FREQUENTLY ASKED
       </div>

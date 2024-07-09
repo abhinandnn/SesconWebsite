@@ -2,7 +2,7 @@ import React from "react";
 
 const Available = () => {
   return (
-    <div className=" w-11/12 mx-auto px-[4vw] flex gap-[64px] flex-col mb-[104px]">
+    <div className=" w-11/12 mx-auto flex gap-[64px] flex-col mb-[104px]">
       <div className="text-[2.5rem] leading-none w-[8rem] font-[400] min-w-fit text-[#B33F0F]">
         OUR AVAILABILITY
       </div>
