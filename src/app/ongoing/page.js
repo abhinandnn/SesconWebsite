@@ -16,14 +16,14 @@ export default function Ongoing() {
   const isLastRow = !showAll && displayedData.length > 8;
 
   return (
-    <div className="w-11/12 mx-auto">
+    <div className="w-11/12 mx-auto flex flex-col h-fit">
       <Breadcrumbs aria-label="breadcrumb" className=" mb-8 mt-10 text-[16px]">
         <Link underline="hover" color="inherit" href="/projects">
           Projects
         </Link>
         <Typography color="#98002E" className=" font-semibold">Ongoing Projects</Typography>
       </Breadcrumbs>
-      <div className="grid grid-cols-4 gap-5 mb-[72px]">
+      <div className="grid grid-cols-4 gap-5 mb-[72px] lg:grid-cols-3 md1:grid-cols-2 sm:grid-cols-1">
         {displayedData.map((dataItem, index) => (
           <div
             className={`flex flex-col gap-4 rounded h-fit p-8 text-black font-semibold text-[20px] leading-[30px] relative ${
@@ -49,7 +49,7 @@ export default function Ongoing() {
           className=" flex mt-[-72px]  mb-[72px] flex-col gap-2 text-[#B33F0F] mx-auto cursor-pointer text-[22px] font-medium"
           onClick={handleShowMore}
         >
-          <div className="text-center">Show more</div>
+          <div className="text-center ">Show more</div>
           <div className=" self-center">
             <img src="/arrows.svg" />
           </div>
