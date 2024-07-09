@@ -7,7 +7,7 @@ import Reach from "@/components/reach";
 
 function Home() {
   return (
-    <div className=" font-lexend h-fit">
+    <div className="font-lexend h-fit">
       <div className="h-[100vh] bg-transparent text-white">
         <BackgroundSlider
           images={["/img1.svg", "/img2.svg", "/img3.svg"]}
@@ -23,7 +23,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-white pt-[4.5rem] px-[4vw] flex gap-[6rem]">
+      <div className="bg-white pt-[4.5rem] px-[4vw] flex gap-[6rem] lg:flex-col lg:gap-5">
         <div className="text-[2.5rem] leading-none w-[8rem] min-w-fit text-[#B33F0F] pt-1 ">
           ABOUT COMPANY
         </div>
@@ -49,7 +49,7 @@ function Home() {
       <div className=" mx-auto mt-[72px] w-fit">
         <img src="/aboutBanner.svg" />
       </div>
-      <div className="bg-white pt-[4.5rem] px-[4vw] flex gap-[6rem]">
+      <div className="bg-white pt-[4.5rem] px-[4vw] flex gap-[6rem] lg:flex-col lg:gap-5">
         <div className="text-[2.5rem] leading-none w-[8rem] min-w-fit text-[#B33F0F] pt-2 ">
           OUR MISSION
         </div>
@@ -81,12 +81,12 @@ function Home() {
         </div>
         <div className="text-[1.5rem]">
           {aboutData.map((item, index) => (
-            <div className={`flex relative justify-between mb-[74px] ${index%2==0?"":"flex-row-reverse"}`}>
-              <div className="  w-[43.7%] min-w-[670px]">
+            <div className={`flex relative justify-between mb-[74px] lg:flex-col ${index%2==0?"":"flex-row-reverse"}`}>
+              <div className="  w-[43.7%]  lg:w-[100%]">
                 <img className=" w-full" src={item.img} />
-                <img className={` absolute top-[-72px] ${index==0&&"hidden"} ${index%2==0?"left-0":"right-0"}`} src="/line.svg"/>
+                <img className={` absolute top-[-72px] pt-5 ${index==0&&"hidden"} ${index%2==0?"left-0":"right-0"}`} src="/line.svg"/>
               </div>
-              <div className=" pt-6 pb-6 flex flex-col gap-4 w-[40.27%]">
+              <div className=" pt-6 px-3 pb-6 flex flex-col gap-4 w-[40.27%] lg:w-[100%]">
                 <div>
                   <img src={item.logo} />
                 </div>

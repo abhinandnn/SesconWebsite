@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <body
         className={`w-screen min-h-screen relative overflow-x-hidden ${inter.className}`}
       >
-        <Navbar />
+        {/* <Navbar /> */}
 
         {children}
 

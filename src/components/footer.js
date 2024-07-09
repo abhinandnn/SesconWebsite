@@ -12,9 +12,9 @@ const Footer = () => {
   };
   return (
   
-      <div className=" w-[100vw] h-fit bg-[#B33F0F] p-10 flex justify-between flex-wrap">
+      <div className=" absolute top-[100%] w-[100vw] h-fit bg-[#B33F0F] p-10 flex justify-between flex-wrap md:grid md:grid-cols-1">
         {/* first part */}
-        <div className=" w-fit flex flex-col items-start gap-8 text-white">
+        <div className=" w-fit flex flex-col items-start gap-8 text-white md:mt-28">
           <div className=" font-bold text-[24px]">Quick Links</div>
           <div className=" grid grid-cols-2 font-normal text-[24px] leading-4 gap-8">
             {quickLinks.map((item, index) => (
@@ -23,7 +23,7 @@ const Footer = () => {
           </div>
         </div>
         {/* first part */}
-        <div className=" flex flex-col items-start gap-8 text-white w-[343px]">
+        <div className=" flex flex-col items-start gap-8 text-white w-[343px] mb-2 md:mt-16">
           <div className=" font-bold text-[24px]">Contact us</div>
           <div className=" flex flex-col font-normal text-[20px] leading-7 gap-8">
             {contactUs.map((item, index) => (
@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
         </div>
         {/* first part */}
-        <div className=" flex  items-start gap-8 text-white text-[12px] font-normal ">
+        <div className=" flex  items-start gap-8 text-white text-[12px] font-normal md:mt-16">
           {badges.map((item, index) => (
             <div key={index} className=" flex flex-col gap-2">
               <img src={item.img} />
@@ -44,11 +44,11 @@ const Footer = () => {
           ))}
         </div>
         {/* first part */}
-        <div className=" flex flex-col justify-between items-center">
+        <div className=" flex flex-col justify-between items-center md:absolute md:top-0 md:flex-row md:justify-between md:w-[100%] md:p-10  ">
           <div className=" w-[175px]">
             <img className=" w-10/12" src="/sesc.svg" />
           </div>
-          <div className=" flex gap-4">
+          <div className=" flex gap-4 pt-3 ">
             {socialMedia.map((item, index) => (
               <img src={item} />
             ))}
