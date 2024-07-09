@@ -21,7 +21,7 @@ import { ehsData } from "@/data/ehsData";
 function Home() {
   return (
     <div className="w-11/12 mx-auto font-lexend h-fit">
-      {/* <div className="h-[100vh] bg-transparent text-white">
+      <div className="h-[100vh] bg-transparent text-white">
         <BackgroundSlider
           images={["/img1.svg", "/img2.svg", "/img3.svg"]}
           duration={4}
@@ -35,7 +35,7 @@ function Home() {
             We deliver what we commit and we commit what we can deliver
           </div>
         </div>
-      </div> */}
+      </div>
       <div className="bg-white pt-[4.5rem] flex gap-[4rem] lg:flex-col lg:gap-5">
         <div className="text-[2.5rem] sm:text-[1.5rem] text-[#B33F0F]">
           ENVIRONMENT HEALTH AND SAFETY POLICY
