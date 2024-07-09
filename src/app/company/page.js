@@ -9,8 +9,8 @@ export default function Company() {
   };
   
   return (
-    <div className=" mt-[72px] overflow-x-hidden w-11/12 mx-auto grid grid-cols-[279px,auto] lg:grid-cols-[209px,auto] md1:grid-cols-1 gap-4">
-      <div className=" md1:hidden lg:w-[209px] flex flex-col gap-14 leading-8 text-[22px] text-[#888888] font-medium justify-start cursor-pointer fixed ">
+    <div className=" mt-[72px] overflow-x-hidden w-11/12 mx-auto grid grid-cols-[279px,auto] lg:grid-cols-[209px,auto] md1:grid-cols-1 gap-16">
+      <div className=" md1:hidden lg:w-[209px]  flex flex-col gap-14 leading-8 text-[22px] text-[#888888] font-medium justify-start cursor-pointer fixed ">
         <a
           href="#management"
           onClick={() => navigationHandler("management")}
