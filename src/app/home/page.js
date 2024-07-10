@@ -15,6 +15,7 @@ import Clients from "@/components/clients";
 import AllCollapseExample from "@/components/faq";
 import Reach from "@/components/reach";
 import Footer from "@/components/footer";
+import ProjectCard from "@/components/projectCard";
 function Home() {
   return (
     <div className="font-lexend h-fit">
@@ -82,6 +83,9 @@ function Home() {
         <div className="text-[2.5rem] leading-none w-[8rem] min-w-fit text-[#B33F0F]">
           FEATURED PROJECTS
         </div>
+<div>
+  <ProjectCard/>
+</div>
       </div>
       
         <Achievement/>

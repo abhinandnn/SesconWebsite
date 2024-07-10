@@ -2,10 +2,10 @@ import React from 'react'
 
 function ProjectCard() {
   return (
-    <div className='w-[20.2rem] h-[22.5rem] group bg-cover flex flex-col-reverse bg-[url("/img1.svg")]'>
+    <div className='w-[20.2rem] transition-all duration-500 ease-out h-[22.5rem] group bg-cover flex flex-col-reverse bg-[url("/img1.svg")]'>
         <div className=''>
-        <div className=' relative bg-black group-hover:h-[8rem] transition-all ease-out bg-opacity-30 h-[22.5rem] flex flex-col items-center'>
-            <button className='w-[10.6rem] h-[3.37rem] rounded-[1.62rem] text-[1.25rem] p-0 bg-white group-hover:block absolute hidden top-[-7rem] items-center justify-center'>
+        <div className=' relative bg-black group-hover:h-[8rem] transition-all duration-500 ease-out bg-opacity-30 h-[22.5rem] flex flex-col items-center'>
+            <button className='w-[10.6rem] h-[3.37rem] rounded-[1.62rem] text-[1.25rem] p-0 transition-all duration-500 ease-out bg-white group-hover:block group-hover:opacity-100 opacity-0 -z-10 group-hover:z-0 absolute top-[-7rem] items-center justify-center'>
                 View Details
             </button>
             <div className='absolute bottom-0 p-[1.8rem] group-hover:py-[1rem]'>
