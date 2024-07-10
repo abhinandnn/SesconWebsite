@@ -16,7 +16,35 @@ import AllCollapseExample from "@/components/faq";
 import Reach from "@/components/reach";
 import Footer from "@/components/footer";
 import ProjectCard from "@/components/projectCard";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 6
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 3
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
+};
 function Home() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  };
   return (
     <div className="font-lexend h-fit">
       <div className="h-[100vh] bg-transparent text-white">
@@ -79,21 +107,31 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-white pt-[3rem] px-[4vw] flex gap-[4rem] pb-9">
+      <div className= "pt-[3rem] px-[4vw] flex gap-[4rem] pb-9">
         <div className="text-[2.5rem] leading-none w-[8rem] min-w-fit text-[#B33F0F]">
           FEATURED PROJECTS
         </div>
-<div>
-  <ProjectCard/>
-</div>
       </div>
-      
+      <div className="px-[4vw] pb-[5rem] pt-[3rem]">
+      <Carousel responsive={responsive}>
+<ProjectCard backgroundUrl='/img1.svg'/>
+<ProjectCard backgroundUrl='/img2.svg'/>
+<ProjectCard backgroundUrl='/img3.svg'/>
+<ProjectCard backgroundUrl='/img1.svg'/>
+<ProjectCard backgroundUrl='/img2.svg'/>
+<ProjectCard backgroundUrl='/img3.svg'/><ProjectCard backgroundUrl='/img1.svg'/>
+<ProjectCard backgroundUrl='/img2.svg'/>
+<ProjectCard backgroundUrl='/img3.svg'/>
+  </Carousel>
+  </div>
         <Achievement/>
         <Available/>
         <Clients/>
         <AllCollapseExample/>
         <Reach section="Home"/>
-       
+        <div className="slider-container">
+      
+</div>
       
       
     </div>
