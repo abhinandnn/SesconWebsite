@@ -33,6 +33,15 @@ function Navbar() {
     { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },
   ];
+  const navigation2 = [
+    { name: "Home", href: "/home" },
+    { name: "About", href: "/about" },
+    { name: "Company", href: "/company" },
+    { name: "EHS", href: "/ehs" },
+    { name: "Contact", href: "/contact" },
+    { name: "Ongoing Projects", href: "/projects/ongoing" },
+    { name: "Completed Projects", href: "/projects/completed" },
+  ];
 
   const hoverHandler = (item) => {
     if (item.name === "Projects") {
@@ -109,7 +118,7 @@ function Navbar() {
               </div>
             ))}
           </div>
-          <div  className={`   overflow-x-hidden  top-0  z-50 ${full?"right-0 w-[70vw] fixed":"right-4 absolute "}`}>
+          <div  className={`   overflow-x-hidden  top-0  z-[500] ${full?"right-0 w-[75vw] fixed":"right-4 absolute "}`}>
             <Disclosure as="nav" className={` hidden md1:flex ${full?"bg-white h-[100vh] flex flex-col gap-4":"bg-none"}`}>
               <div className="ml-1  space-y-1 pr-4 pl-1 pb-4 pt-2">
                 <div className="relative flex h-16 items-center justify-between">
@@ -137,7 +146,7 @@ function Navbar() {
 
               <Disclosure.Panel className="md:flex px-4 hidden self-end">
                 <div className="space-y-1 px-2 pb-3 pt-2 flex flex-col font-medium leading-5 gap-4 text-[20px] text-right ">
-                  {navigation.map((item) => (
+                  {navigation2.map((item) => (
                     <Disclosure.Button
                       key={item.name}
                       as="a"
@@ -146,8 +155,8 @@ function Navbar() {
                       className={classNames(
                         current === item.href
                           ? " text-[#B33F0F]"
-                          : "text-[#4F4F4F] hover:bg-[#bba094]",
-                        "block rounded-md px-3 py-2  font-medium"
+                          : "text-[#4F4F4F] hover:bg-[#FFF7ED]",
+                        "block  px-3 py-2  font-medium"
                       )}
                     >
                       {item.name}

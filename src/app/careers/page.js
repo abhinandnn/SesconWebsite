@@ -23,11 +23,11 @@ import CareerCard from "@/components/careerCard";
 function Careers() {
   return (
     <div className="font-lexend h-fit px-[4vw] py-[4rem]">
-     <div className="flex gap-[4rem] justify-between pb-[4rem]">
-<div className="text-[2.5rem] text-[#B33F0F]">
+     <div className="flex gap-[4rem] md1:flex-col md1:gap-[2rem] justify-between pb-[4rem]">
+<div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem] text-[#B33F0F]">
 AVAILABLE POSITIONS
 </div>
-<div className="text-[2rem]">
+<div className="text-[2rem] sm:text-[1.675rem] mob:text-[1.25rem]">
 View our range of available jobs today and take the first
 step towards a rewarding and fulfilling career with us.
 </div>
@@ -40,10 +40,10 @@ step towards a rewarding and fulfilling career with us.
     </div>
      <div className="">
         <div className="flex justify-between flex-wrap">
-     <div className="text-[2.5rem] text-[#B33F0F] w-[35rem]">
+     <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem] text-[#B33F0F] w-[35rem]">
      OPEN CALL FOR INTERESTED CANDIDATES
 </div>
-<div className="w-[42rem] text-[2rem]">
+<div className="w-[42rem] sm:text-[1.675rem] mob:text-[1.25rem] text-[2rem]">
 We welcome your details and look forward to learning more about how you can contribute to our team.
 </div>
 </div>
