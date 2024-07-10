@@ -8,8 +8,8 @@ function Navbar() {
   const pathname = usePathname()
   return (
     <div>
-      <div className="px-[4vw] z-20 pt-[1rem] flex justify-between">
-        <Image src={logo} alt="logo" />
+      <div className="px-[4vw] mob:px-[6vw] z-20 pt-[1rem] flex justify-between">
+        <Image className="md1:scale-80 sm:scale-70 md1:ml-[-1.5rem] md1:mt-[-0.5rem] sm:mt-[-0.75rem] " src={logo} alt="logo" />
         <div className={`flex gap-[4vw] text-[1rem] ${pathname=="/ongoing"||pathname=="/contact"||pathname=="/careers"||pathname=="/company"||pathname=="/projects/ongoing/all"||pathname=="/projects/completed/all"?"text-black":"text-white"}  items-center font-bold`}>
         <Link href="/home">
           <div className=" cursor-pointer">Home</div>
