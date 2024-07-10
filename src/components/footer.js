@@ -1,9 +1,11 @@
+"use client"
 import React from "react";
 import { quickLinks } from "@/data/footerData";
 import { contactUs } from "@/data/footerData";
 import { badges } from "@/data/footerData";
 import { socialMedia } from "@/data/footerData";
 import { motion } from "framer-motion";
+import { FadeInSection } from "@/utils/animation";
 
 const Footer = () => {
   const variant = {
@@ -11,7 +13,7 @@ const Footer = () => {
     hidden: { scale: 0 },
   };
   return (
-  
+    <FadeInSection>
       <div className=" absolute top-[100%] w-[100vw] h-fit bg-[#B33F0F] p-10 flex justify-between flex-wrap md:grid md:grid-cols-1">
         {/* first part */}
         <div className=" w-fit flex flex-col items-start gap-8 text-white md:mt-28">
@@ -55,7 +57,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    
+    </FadeInSection>
   );
 };
 

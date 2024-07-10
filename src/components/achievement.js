@@ -2,7 +2,7 @@ import React from "react";
 
 const Achievement = () => {
   return (
-    <div className=" w-11/12 mx-auto bg-white grid grid-cols-2 px-[4vw] gap-x-[100px] gap-y-[33px] mb-[104px] lg:grid-cols-1">
+    <div className=" w-11/12 mx-auto bg-white grid grid-cols-2  gap-x-[100px] gap-y-[33px] mb-[104px] lg:grid-cols-1">
       <div className=" flex flex-col">
         <div className="flex items-end gap-[41px]">
           <img src="/trail.svg" />

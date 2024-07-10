@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { FadeInSection} from "@/utils/animation"
 import { aboutData } from "@/data/aboutData";
 import Reach from "@/components/reach";
 import BackgroundSlider from "react-background-slider";
@@ -36,23 +35,7 @@ const responsive = {
     items: 1,
   },
 };
-const FadeInSection = ({ children }) => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
 
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      transition={{ duration: 0.9 }}
-    >
-      {children}
-    </motion.div>
-  );
-};
 
 function Home() {
   return (
