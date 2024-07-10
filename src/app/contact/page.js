@@ -22,11 +22,11 @@ import Link from "next/link";
 function Contact() {
   return (
     <div className="font-lexend h-fit px-[4vw] py-[4rem]">
-     <div className="flex gap-[4rem] justify-between pb-[4rem]">
-<div className="text-[2.5rem] text-[#B33F0F] min-w-fit">
+     <div className="flex md1:flex-col md1:gap-[2rem] gap-[4rem] justify-between pb-[4rem]">
+<div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem] text-[#B33F0F] min-w-fit">
 CONTACT US
 </div>
-<div className="text-[1.5rem]">
+<div className="text-[1.5rem]  sm:text-[1.375rem] mob:text-[1.25rem]">
 Our team of experienced and dedicated professionals and
 commercial builders is ready to assist you with your next
 commercial construction project.
@@ -103,11 +103,11 @@ Lic No. 173 639 C
      </div>
 
      <div className="">
-     <div className="text-[2.5rem] text-[#B33F0F] w-[100%]">
+     <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem] text-[#B33F0F] w-[100%]">
      CONTACT FORM
 </div>
 <div className="pt-4 flex justify-between flex-wrap gap-[2rem]">
-    <div className="w-[42rem] text-[2rem]">
+    <div className="w-[42rem] sm:text-[1.675rem] mob:text-[1.325rem] text-[2rem] ">
     We’d love to hear from you! Please reach
 out to us through our contact form and
 let us know how we can assist you.
