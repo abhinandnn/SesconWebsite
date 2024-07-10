@@ -6,7 +6,7 @@ const Achievement = () => {
       <div className=" flex flex-col">
         <div className="flex items-end gap-[41px]">
           <img src="/trail.svg" />
-          <div className=" flex items-end gap-[41px] mob1:flex-col mob1:items-start mob1:gap-7 ">
+          <div className=" flex items-end gap-[41px] mob1:flex-col mob1:items-start mob1:gap-0 ">
             <div className="text-[2.5rem] mob:text-[1.5rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#B33F0F] leading-[40px] font-bold ">
               1500+
             </div>
@@ -22,7 +22,7 @@ const Achievement = () => {
       <div className=" flex flex-col">
         <div className="flex items-end gap-[41px]">
           <img src="/trail.svg" />
-          <div className=" flex items-end gap-[41px] mob1:flex-col mob1:items-start mob1:gap-7 ">
+          <div className=" flex items-end gap-[41px] mob1:flex-col mob1:items-start mob1:gap-0 ">
             <div className="text-[2.5rem] mob:text-[1.5rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#B33F0F] leading-[40px] font-bold ">
               1500+
             </div>
@@ -38,7 +38,7 @@ const Achievement = () => {
       <div className=" flex flex-col">
         <div className="flex items-end gap-[41px]">
           <img src="/trail.svg" />
-          <div className=" flex items-end gap-[41px] mob1:flex-col mob1:items-start mob1:gap-7 ">
+          <div className=" flex items-end gap-[41px] mob1:flex-col mob1:items-start mob1:gap-0 ">
             <div className="text-[2.5rem] mob:text-[1.5rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#B33F0F] leading-[40px] font-bold ">
               1500+
             </div>
@@ -54,7 +54,7 @@ const Achievement = () => {
       <div className=" flex flex-col">
         <div className="flex items-end gap-[41px]">
           <img src="/trail.svg" />
-          <div className=" flex items-end gap-[41px] mob1:flex-col mob1:items-start mob1:gap-7 ">
+          <div className=" flex items-end gap-[41px] mob1:flex-col mob1:items-start mob1:gap-0 ">
             <div className="text-[2.5rem] mob:text-[1.5rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#B33F0F] leading-[40px] font-bold ">
               1500+
             </div>

@@ -5,7 +5,37 @@ import { useInView } from "react-intersection-observer";
 import { aboutData } from "@/data/aboutData";
 import Reach from "@/components/reach";
 import BackgroundSlider from "react-background-slider";
-
+import { Fade } from "@mui/material";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import ProjectCard from "@/components/projectCard";
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 6
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1454 },
+    items: 4
+  },
+  tablet: {
+    breakpoint: { max: 1454, min: 1020 },
+    items: 3
+  },
+  tablet1: {
+    breakpoint: { max: 1020, min: 756 },
+    items: 2
+  },
+  tablet2: {
+    breakpoint: { max: 755, min: 554 },
+    items: 1.5
+  },
+  mobile: {
+    breakpoint: { max: 554, min: 0 },
+    items: 1
+  }
+};
 const FadeInSection = ({ children }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -128,7 +158,7 @@ function Home() {
                     <img
                       className={`absolute top-[-72px] pt-5 ${
                         index === 0 && "hidden"
-                      } ${index % 2 === 0 ? "left-0" : "right-0"}`}
+                      } ${index % 2 === 0 ? "rotate-180 left-0" : "right-0"}`}
                       src="/line.svg"
                       alt="Line"
                     />
@@ -150,6 +180,25 @@ function Home() {
           </div>
         </div>
       </FadeInSection>
+      <FadeInSection>
+      <div className= "pt-[3rem] px-[4vw] flex gap-[4rem] pb-9">
+        <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem]  leading-none w-[8rem] min-w-fit text-[#B33F0F]">
+        EQUIPMENTS TOOLS AND PLANTS
+        </div>
+      </div>
+      <div className="px-[4vw] pb-[5rem] pt-[3rem]">
+      <Carousel responsive={responsive}>
+<ProjectCard backgroundUrl='/img1.svg'/>
+<ProjectCard backgroundUrl='/img2.svg'/>
+<ProjectCard backgroundUrl='/img3.svg'/>
+<ProjectCard backgroundUrl='/img1.svg'/>
+<ProjectCard backgroundUrl='/img2.svg'/>
+<ProjectCard backgroundUrl='/img3.svg'/><ProjectCard backgroundUrl='/img1.svg'/>
+<ProjectCard backgroundUrl='/img2.svg'/>
+<ProjectCard backgroundUrl='/img3.svg'/>
+  </Carousel>
+  </div>
+  </FadeInSection>
       <FadeInSection>
         <Reach section="About" />
       </FadeInSection>
