@@ -17,7 +17,7 @@ export default function Ongoing() {
 
   return (
     <div className="w-11/12 mx-auto">
-      <Breadcrumbs aria-label="breadcrumb" className=" mb-8 mt-10 text-[16px]">
+      {/* <Breadcrumbs aria-label="breadcrumb" className=" mb-8 mt-10 text-[16px]">
         <Link underline="hover" color="inherit" href="/projects">
           Projects
         </Link>
@@ -54,7 +54,7 @@ export default function Ongoing() {
             <img src="/arrows.svg" />
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

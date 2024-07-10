@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     screens: {
       '2xl': {'max': '1535px'},
+      '1xl': {'max': '1435px'},
       'xl': {'max': '1279px'},
       'lg': {'max': '1023px'},
       'lg1': {'max': '1065px'},
