@@ -20,23 +20,22 @@ import { ehsData } from "@/data/ehsData";
 
 function Home() {
   return (
-    <div className="w-11/12 mx-auto font-lexend h-fit">
-      <div className="h-[100vh] bg-transparent text-white">
+    <div className="font-lexend h-fit">
+    <div className="h-[92vh] mob:h-[60vh] bg-transparent text-white">
         <BackgroundSlider
           images={["/img1.svg", "/img2.svg", "/img3.svg"]}
           duration={4}
           transition={2}
         />
-
-        <div className="px-[4vw]">
-          <div className="text-[2rem] pt-[5rem]">We Build Your</div>
-          <div className="text-[10rem] leading-none font-bold">Dreams</div>
-          <div className="text-[2rem]">
+        <div className="px-[4vw] mob:px-[6vw]">
+          <div className="text-[2rem] mob:text-[1.25rem] sm:text-[1.5rem] lg1:text-[1.75rem] pt-[5rem]">We Build Your</div>
+          <div className="text-[10rem] mini1:text-[5.75rem] mob:text-[6.25rem] sm:text-[7.25rem] lg1:text-[8.375rem] leading-none font-bold">Dreams</div>
+          <div className="text-[2rem] mob:text-[1.25rem] sm:text-[1.5rem] lg1:text-[1.75rem]">
             We deliver what we commit and we commit what we can deliver
           </div>
         </div>
       </div>
-      <div className="bg-white pt-[4.5rem] flex gap-[4rem] lg:flex-col lg:gap-5">
+      <div className="bg-white pt-[4.5rem] px-[4vw] mob:px-[6vw] flex gap-[4rem] lg:flex-col lg:gap-5">
         <div className="text-[2.5rem] sm:text-[1.5rem] text-[#B33F0F]">
           ENVIRONMENT HEALTH AND SAFETY POLICY
         </div>
@@ -78,13 +77,13 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className=" flex flex-col mb-[4rem] gap-[4rem]">
+      <div className=" flex flex-col px-[4vw] mob:px-[6vw] mb-[4rem] gap-[4rem]">
         <div className="text-[2.5rem] mob1:text-[1.5rem]  text-[#B33F0F]">
           SESCON BUILDERS SAFETY ORGANISATION
         </div>
         <img src="/SBSO.svg" />
       </div>
-      <div className="  text-[1.5rem] text-[#B33F0F] font-normal">
+      <div className=" px-[4vw] mob:px-[6vw] pb-2  text-[1.5rem] text-[#B33F0F] font-normal">
         {ehsData.map((item, index) => (
           <div
             className={`flex relative justify-between mb-[74px] lg:flex-col ${
@@ -96,7 +95,7 @@ function Home() {
               <img
                 className={` absolute top-[-72px] pt-5 ${
                   index == 0 && "hidden"
-                } ${index % 2 == 0 ? "left-0" : "right-0"}`}
+                } ${index % 2 == 0 ? "rotate-180 left-0" : "right-0"}`}
                 src="/line.svg"
               />
             </div>

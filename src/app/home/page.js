@@ -115,8 +115,8 @@ function Home() {
         </div>
         <div className="mob:flex hidden">
           <SimpleImageSlider
-            width={400}
-            height={400}
+            width={370}
+            height={370}
             images={["/img1.svg", "/img2.svg", "/img3.svg"]}
             slideDuration={0.5}
             autoPlay={true}

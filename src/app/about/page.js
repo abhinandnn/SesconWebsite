@@ -58,21 +58,20 @@ function Home() {
   return (
     <div className="font-lexend h-fit">
       <FadeInSection>
-        <div className="h-[100vh] bg-transparent text-white">
-          <BackgroundSlider
-            images={["/img1.svg", "/img2.svg", "/img3.svg"]}
-            duration={4}
-            transition={2}
-          />
-
-          <div className="px-[4vw]">
-            <div className="text-[2rem] pt-[5rem]">We Build Your</div>
-            <div className="text-[10rem] leading-none font-bold">Dreams</div>
-            <div className="text-[2rem]">
-              We deliver what we commit and we commit what we can deliver
-            </div>
+      <div className="h-[92vh] mob:h-[60vh] bg-transparent text-white">
+        <BackgroundSlider
+          images={["/img1.svg", "/img2.svg", "/img3.svg"]}
+          duration={4}
+          transition={2}
+        />
+        <div className="px-[4vw] mob:px-[6vw]">
+          <div className="text-[2rem] mob:text-[1.25rem] sm:text-[1.5rem] lg1:text-[1.75rem] pt-[5rem]">We Build Your</div>
+          <div className="text-[10rem] mini1:text-[5.75rem] mob:text-[6.25rem] sm:text-[7.25rem] lg1:text-[8.375rem] leading-none font-bold">Dreams</div>
+          <div className="text-[2rem] mob:text-[1.25rem] sm:text-[1.5rem] lg1:text-[1.75rem]">
+            We deliver what we commit and we commit what we can deliver
           </div>
         </div>
+      </div>
       </FadeInSection>
 
       <FadeInSection>
