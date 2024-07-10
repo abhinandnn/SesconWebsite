@@ -95,7 +95,7 @@ function Home() {
             autoPlay={true}
           />
         </div>
-        <div className="md1:flex sm:hidden">
+        <div className="md1:flex hidden sm:hidden">
           <SimpleImageSlider
             width={570}
             height={570}
@@ -104,7 +104,7 @@ function Home() {
             autoPlay={true}
           />
         </div>
-        <div className="sm:flex mob:hidden">
+        <div className="sm:flex mob:hidden hidden">
           <SimpleImageSlider
             width={470}
             height={470}
@@ -124,18 +124,18 @@ function Home() {
         </div>
         <div className="flex flex-col gap-[4rem]">
           <div>
-            <div className="font-bold leading-tight text-[#B33F0F] text-[7.5rem]">
+            <div className="font-bold leading-tight text-[#B33F0F] mob:text-[4.5rem] sm:text-[5.125rem] lg1:text-[5.875rem] text-[7.5rem]">
               20+
             </div>
-            <div className="font-bold text-[2.5rem] pb-6 border-b border-black">
+            <div className="font-bold text-[2.5rem] mob:text-[1.5rem] sm:text-[1.75rem] lg1:text-[2rem] pb-6 border-b border-black">
               Year Experience
             </div>
           </div>
           <div>
-            <div className="font-bold leading-tight text-[#B33F0F] text-[7.5rem]">
+            <div className="font-bold mob:text-[4.5rem] sm:text-[5.125rem] lg1:text-[5.875rem] leading-tight text-[#B33F0F] text-[7.5rem]">
               120+
             </div>
-            <div className="font-bold text-[2.5rem] pb-6 border-b border-black">
+            <div className="font-bold text-[2.5rem] mob:text-[1.5rem] sm:text-[1.75rem] lg1:text-[2rem] pb-6 border-b border-black">
               Projects Built
             </div>
           </div>
