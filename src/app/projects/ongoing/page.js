@@ -16,6 +16,7 @@ import AllCollapseExample from "@/components/faq";
 import Reach from "@/components/reach";
 import Footer from "@/components/footer";
 import ProjectCard1 from "@/components/projectCard1";
+import Link from "next/link";
 function Home() {
   return (
     <div className="font-lexend h-fit">
@@ -36,19 +37,26 @@ function Home() {
           Ongoing Projects
         </div>
         <div className="text-[1.75rem]">
+          <Link href="/projects/ongoing/all">
         See all Projects
+        </Link>
         </div>
       </div>
-       <div className="px-[4vw] pt-[5rem]">
-        <div className="flex flex-wrap justify-between">
-        <ProjectCard1 name="Project 1" type="Type 1"/>
+       <div className="px-[4vw] pt-[5rem] pb-[3rem] 1xl:pb-[5rem]">
+        <div className="flex 1xl:flex-col 1xl:justify-center 1xl:items-center 1xl:gap-[4rem] justify-between 1xl:pb-[4rem]">
+        <ProjectCard1 name="DCM SHRIRAM PLANT, JHAGADIA, GUJARAT" type="Commercial, Industrial"/>
+        <ProjectCard1 name="Project 2" type="Type 2"/>
+        </div>
+        <div className="1xl:flex flex-col hidden gap-[4rem] justify-center items-center">
+        <ProjectCard1 name="Project 2" type="Type 2"/>
+        <ProjectCard1 name="Project 2" type="Type 2"/>
         <ProjectCard1 name="Project 2" type="Type 2"/>
         </div>
         <div>
-        <div className="flex justify-between flex-wrap ">
-       <div className="scale-60 m-[-7rem]"> <ProjectCard1 name="Project 3" type="Type 3"/></div>
-       <div className="scale-60 m-[-7rem]"> <ProjectCard1 name="Project 3" type="Type 3"/></div>
-       <div className="scale-60 m-[-7rem]"> <ProjectCard1 name="Project 3" type="Type 3"/></div>
+        <div className="flex justify-between 1xl:hidden">
+       <div className="scale-65 m-[-7rem]">         <ProjectCard1 name="DCM SHRIRAM PLANT, JHAGADIA, GUJARAT" type="Commercial, Industrial"/></div>
+       <div className="scale-65 m-[-7rem]"> <ProjectCard1 name="Project 3" type="Type 3"/></div>
+       <div className="scale-65 m-[-7rem]"> <ProjectCard1 name="Project 3" type="Type 3"/></div>
 
         </div> 
        </div>

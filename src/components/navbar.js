@@ -10,7 +10,7 @@ function Navbar() {
     <div>
       <div className="px-[4vw] z-20 pt-[1rem] flex justify-between">
         <Image src={logo} alt="logo" />
-        <div className={`flex gap-[4vw] text-[1rem] ${pathname=="/ongoing"||pathname=="/contact"||pathname=="/careers"||pathname=="/company"?"text-black":"text-white"}  items-center font-bold`}>
+        <div className={`flex gap-[4vw] text-[1rem] ${pathname=="/ongoing"||pathname=="/contact"||pathname=="/careers"||pathname=="/company"||pathname=="/projects/ongoing/all"||pathname=="/projects/completed/all"?"text-black":"text-white"}  items-center font-bold`}>
         <Link href="/home">
           <div className=" cursor-pointer">Home</div>
           </Link>
@@ -24,7 +24,9 @@ function Navbar() {
           <Link href="/ehs">
             <div className=" cursor-pointer">EHS</div>
           </Link>
+          <Link href="/projects/ongoing">
           <div className=" cursor-pointer">Projects</div>
+          </Link>
           <Link href={"/careers"}>  
           <div className=" cursor-pointer">Careers</div>
           </Link>
