@@ -24,11 +24,11 @@ function AllCollapseExample() {
     ],
   };
   return (
-    <div className=" px-[4vw] flex justify-between items-start mb-[100px]">
-      <div className="text-[2.5rem] leading-none w-[8rem] font-[400] min-w-fit text-[#B33F0F] pt-3">
+    <div className=" w-11/12 mx-auto  flex justify-between items-start mb-[100px] md1:flex-col">
+      <div className="text-[2.5rem] leading-none w-[8rem] font-[400] min-w-fit text-[#B33F0F] pt-3 pr-5">
         FREQUENTLY ASKED
       </div>
-      <div className=" w-[62.5%] text-black text-[2rem] font-[600] leading-[32px] ">
+      <div className=" w-[62.5%] text-black text-[2rem] font-[600] leading-[32px] md1:w-[100%] ">
         <Faq className data={data} />
       </div>
     </div>

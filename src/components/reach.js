@@ -2,16 +2,16 @@ import React from 'react'
 
 const Reach = ({section}) => {
   return (
-    <div className=' flex flex-col gap-[64px] px-[4vw] mb-[100px]'>
+    <div className=' w-11/12 mx-auto flex flex-col gap-[64px]  mb-[100px]'>
        <div className="text-[2.5rem] leading-none w-[8rem] font-[400] min-w-fit text-[#B33F0F]">
        Reach Us out
       </div>
-      <div className=' flex justify-between items-start flex-wrap '>
+      <div className='grid grid-cols-2 lg:grid-cols-1'>
         <div>
-          {section=="Home"?<img src='/gujrat.svg' className=' pt-[70px]'/>:<img src='/delhiAbout.svg' className=' pt-[70px]'/>}  
+          {section=="Home"?<img src='/gujrat.svg' className=' pt-[70px] w-[100%]'/>:<img src='/delhiAbout.svg' className=' pt-[70px] w-[100%]'/>}  
         </div>
         <div>
-          {section=="Home"?<img src='/gujrat.svg' className=' pt-[70px]'/>:<img src='/gujratAbout.svg' className=' pt-[70px]'/>}  
+          {section=="Home"?<img src='/gujrat.svg' className=' pt-[70px] w-[100%]'/>:<img src='/gujratAbout.svg' className=' pt-[70px] w-[100%]'/>}  
         </div>
       </div>
     </div>
