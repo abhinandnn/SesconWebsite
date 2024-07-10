@@ -4,6 +4,7 @@ import logo from "@/assets/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { FadeInSection } from "@/utils/animation";
 import {
   Disclosure,
@@ -11,6 +12,7 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useRouter } from "next/navigation";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -19,74 +21,122 @@ function classNames(...classes) {
 function Navbar() {
   const pathname = usePathname();
   const [current, setCurrent] = useState(pathname);
+  const [hover, setHover] = useState(false);
+  const [full, setFull] = useState(false);
+  const router = useRouter();
 
   const navigation = [
     { name: "Home", href: "/home" },
     { name: "About", href: "/about" },
     { name: "Company", href: "/company" },
-    { name: "Projects", href: "/projects/ongoing" },
+    { name: "Projects", href: "" },
     { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },
   ];
 
+  const hoverHandler = (item) => {
+    if (item.name === "Projects") {
+      setHover(true);
+    }
+  };
+
+  const hoverLeaveHandler = (item) => {
+    if (item.name === "Projects") {
+      setHover(false);
+    }
+  };
+
+  const handleProjectsClick = (path) => {
+    router.push(path);
+    setCurrent(path);
+  };
+
   return (
     <FadeInSection>
       <div>
-        <div className="w-11/12 mx-auto mob:px-[6vw] z-20 pt-[1rem] flex justify-between">
+        <div className="w-11/12 mx-auto  z-20 pt-[1rem] flex justify-between">
           <Image
             className="md1:scale-80 sm:scale-70 md1:ml-[-1.5rem] md1:mt-[-0.5rem] sm:mt-[-0.75rem] "
             src={logo}
             alt="logo"
           />
           <div
-            className={`flex gap-[4vw] text-[1rem] md1:hidden ${
-              pathname == "/ongoing" ||
-              pathname == "/contact" ||
-              pathname == "/careers" ||
-              pathname == "/company" ||
-              pathname == "/projects/ongoing/all" ||
-              pathname == "/projects/completed/all"
+            className={`flex gap-[4vw] text-[1rem] md1:hidden items-baseline mt-5 ${
+              pathname === "/ongoing" ||
+              pathname === "/contact" ||
+              pathname === "/careers" ||
+              pathname === "/company" ||
+              pathname === "/projects/ongoing/all" ||
+              pathname === "/projects/completed/all"
                 ? "text-black"
                 : "text-white"
             } items-center font-bold`}
           >
-            {navigation.map((item) => (
-              <Link href={item.href} key={item.name}>
-                <div
-                  onClick={() => setCurrent(item.href)}
-                  className={`cursor-pointer ${
-                    current === item.href ? "text-[#B33F0F]" : ""
-                  }`}
-                >
-                  {item.name}
-                </div>
-              </Link>
+            {navigation.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col"
+                onMouseEnter={() => hoverHandler(item)}
+                onMouseLeave={() => hoverLeaveHandler(item)}
+              >
+                <Link href={item.href}>
+                  <div
+                    onClick={
+                      item.name !== "Projects"
+                        ? () => setCurrent(item.href)
+                        : null
+                    }
+                    className={`cursor-pointer relative ${
+                      current === item.href ? "text-[#B33F0F]" : ""
+                    }`}
+                  >
+                    {item.name}{" "}
+                    {item.name === "Projects" ? (
+                      <KeyboardArrowDownIcon />
+                    ) : null}
+                  </div>
+                </Link>
+                {item.name === "Projects" ? (
+                  <div
+                    className={`mt-3 z-50 w-fit h-fit bg-white rounded-lg px-4 py-2 flex flex-col gap-2 font-semibold text-[16px] text-[#B33F0F] leading-6 cursor-pointer transition-opacity duration-300 ${
+                      hover ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    <div onClick={() => handleProjectsClick("/projects/ongoing")}>Ongoing</div>
+                    <div onClick={() => handleProjectsClick("/projects/completed")}>Completed</div>
+                  </div>
+                ) : null}
+              </div>
             ))}
           </div>
-          <div className="absolute top-0 right-10 z-50">
-            <Disclosure as="nav" className="bg-none">
-              <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div  className={`   overflow-x-hidden  top-0  z-50 ${full?"right-0 w-[70vw] fixed":"right-4 absolute "}`}>
+            <Disclosure as="nav" className={` hidden md1:flex ${full?"bg-white h-[100vh] flex flex-col gap-4":"bg-none"}`}>
+              <div className="ml-1  space-y-1 pr-4 pl-1 pb-4 pt-2">
                 <div className="relative flex h-16 items-center justify-between">
-                  <div className="absolute inset-y-0 left-0 hidden items-center md:flex">
+                  <div className=" w-fit  hidden items-center md:flex">
                     {/* Mobile menu button */}
-                    <Disclosure.Button className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                    <Disclosure.Button onClick={()=>setFull(!full)} className="group  relative inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-gray-white hover:text-white">
                       <span className="absolute -inset-0.5" />
                       <span className="sr-only">Open main menu</span>
                       <Bars3Icon
                         aria-hidden="true"
-                        className="block h-6 w-6 group-data-[open]:hidden"
+                        className="block h-6 w-6  group-data-[open]:hidden"
+                        
                       />
+                      
                       <XMarkIcon
                         aria-hidden="true"
-                        className="hidden h-6 w-6 group-data-[open]:block"
+                        className="hidden  text-black h-6 w-6 group-data-[open]:block"
+                        
                       />
                     </Disclosure.Button>
                   </div>
+                {full?  <div><img src="/logo1.svg"/></div>:null}
                 </div>
               </div>
 
-              <Disclosure.Panel className="md:flex hidden">
-                <div className="space-y-1 px-2 pb-3 pt-2">
+              <Disclosure.Panel className="md:flex px-4 hidden self-end">
+                <div className="space-y-1 px-2 pb-3 pt-2 flex flex-col font-medium leading-5 gap-4 text-[20px] text-right ">
                   {navigation.map((item) => (
                     <Disclosure.Button
                       key={item.name}
@@ -96,8 +146,8 @@ function Navbar() {
                       className={classNames(
                         current === item.href
                           ? " text-[#B33F0F]"
-                          : "text-black hover:bg-[#bba094]",
-                        "block rounded-md px-3 py-2 text-base font-medium"
+                          : "text-[#4F4F4F] hover:bg-[#bba094]",
+                        "block rounded-md px-3 py-2  font-medium"
                       )}
                     >
                       {item.name}
