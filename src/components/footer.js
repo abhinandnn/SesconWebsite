@@ -20,7 +20,7 @@ const Footer = () => {
           <div className=" font-bold text-[24px] mob1:text-[18px]">Quick Links</div>
           <div className=" grid grid-cols-2 font-normal text-[24px] leading-4 gap-8 mob1:text-[18px]">
             {quickLinks.map((item, index) => (
-              <div key={index}>{item}</div>
+              <div  key={index}>{item}</div>
             ))}
           </div>
         </div>
@@ -39,9 +39,9 @@ const Footer = () => {
         {/* first part */}
         <div className=" flex  items-start gap-8 text-white text-[12px] font-normal md:mt-16">
           {badges.map((item, index) => (
-            <div key={index} className=" flex flex-col gap-2">
-              <img src={item.img} />
-              <div className=" text-center">{item.title}</div>
+            <div key={index} className=" flex flex-col gap-2 ">
+              <img src={item.img}  />
+              <div className=" text-center ">{item.title}</div>
             </div>
           ))}
         </div>

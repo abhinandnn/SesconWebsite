@@ -16,12 +16,12 @@ export default function Ongoing() {
   const isLastRow = !showAll && displayedData.length > 8;
 
   return (
-    <div className="w-11/12 mx-auto flex flex-col h-fit">
+    <div className="w-11/12 font-lexend mx-auto flex flex-col h-fit">
       <Breadcrumbs aria-label="breadcrumb" className=" mb-8 mt-10 w-fit text-[16px]">
-        <Link underline="hover" color="inherit" >
+        <Link underline="hover" color="inherit">
           Projects
         </Link>
-        <Typography color="#98002E" className=" font-semibold">Ongoing Projects</Typography>
+        <Typography color="#98002E" className=" font-semibold">Completed Projects</Typography>
       </Breadcrumbs>
       <div className="grid grid-cols-4 gap-5 mb-[72px] lg:grid-cols-3 md1:grid-cols-2 sm:grid-cols-1">
         {displayedData.map((dataItem, index) => (

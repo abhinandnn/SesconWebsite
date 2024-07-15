@@ -20,7 +20,7 @@ import { ehsData } from "@/data/ehsData";
 
 function Home() {
   return (
-    <div className="font-lexend h-fit">
+    <div className=" font-lexend h-fit">
     <div className="h-[92vh] mob:h-[60vh] bg-transparent text-white">
         <BackgroundSlider
           images={["/img1.svg", "/img2.svg", "/img3.svg"]}
@@ -36,11 +36,11 @@ function Home() {
         </div>
       </div>
       <div className="bg-white pt-[4.5rem] px-[4vw] mob:px-[6vw] flex gap-[4rem] lg:flex-col lg:gap-5">
-        <div className="text-[2.5rem] sm:text-[1.5rem] text-[#B33F0F]">
+        <div className="text-[2.5rem] sm:text-[1.5rem] text-[#B33F0F] mob1:text-[24px]">
           ENVIRONMENT HEALTH AND SAFETY POLICY
         </div>
         <div className="pl-[3rem] mb-[4rem] flex flex-col gap-[1rem]">
-          <div className="text-[1.75rem] lg:ml-[-3rem]">
+          <div className="text-[1.75rem] lg:ml-[-3rem] mob1:text-[18px]">
             We at SESCON BUILDERS are committed to provide Safe and Healthy
             working environment with concern for our surrounding environment at
             our location by taking adequate steps to comply with the
@@ -50,7 +50,7 @@ function Home() {
             Environment Health & Safety .
           </div>
           <div>
-            <div className="relative text-[1.75rem] pt-8 flex items-center">
+            <div className="relative text-[1.75rem] pt-8 flex items-center mob1:text-[18px]">
               <img className="absolute left-[-4rem] lg:left-[-3rem]" src="/tick1.svg" />
               <div>
                 Provide necessary information, awareness and training to all
@@ -58,7 +58,7 @@ function Home() {
                 and responsible manner
               </div>
             </div>
-            <div className="relative text-[1.75rem] pt-8 flex items-center">
+            <div className="relative text-[1.75rem] pt-8 flex items-center mob1:text-[18px]">
               <img className="absolute left-[-4rem] lg:left-[-3rem]" src="/tick1.svg" />
               <div>
                 Provide necessary information, awareness and training to all
@@ -66,7 +66,7 @@ function Home() {
                 and responsible manner
               </div>
             </div>
-            <div className="relative text-[1.75rem] pt-8 flex items-center">
+            <div className="relative text-[1.75rem] pt-8 flex items-center mob1:text-[18px]">
               <img className="absolute left-[-4rem] lg:left-[-3rem]" src="/tick1.svg" />
               <div>
                 Provide necessary information, awareness and training to all
@@ -101,10 +101,10 @@ function Home() {
             </div>
             <div className=" pt-6 px-3 pb-6 flex flex-col gap-4 w-[40.27%] lg:w-[100%]">
               {/* <div>
-                <img src={item.logo} />
+                <img src={item.logo} />mob1:text-[18px]
               </div> */}
-              <div className="text-[2rem] font-semibold">{item.title}</div>
-              <div className=" self-end text-black mt-8 font-medium leading-8">
+              <div className="text-[2rem] font-normal mob1:text-[24px]">{item.title}</div>
+              <div className=" self-end text-black mt-8 font-normal mob1:text-[18px] leading-8">
                 {item.description}
               </div>
             </div>

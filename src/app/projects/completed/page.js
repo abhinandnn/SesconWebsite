@@ -29,7 +29,7 @@ function Home() {
 
         <div className="">
           <div className="text-[2rem] pt-[10rem] mob:pt-9 md1:pt-[18rem] md1:text-[1.675rem] mob1:text-[1.375rem] mini1:text-[1.25rem] ">
-            Our Ongoing Projects
+            Our Completed Projects
           </div>
           <div className="text-[5rem] md1:text-[3.75rem] mob1:text-[2.5rem] mini1:text-[1.875rem]">
             Crafted with Love and Care
@@ -38,10 +38,10 @@ function Home() {
       </div>
       <div className="bg-white pt-[4.5rem]  mini1:flex-col mini1:gap-4 flex justify-between">
         <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem] leading-none w-[8rem] min-w-fit text-[#B33F0F]">
-          Ongoing Projects
+          Completed Projects
         </div>
         <div className="text-[1.75rem] sm:text-[1.5rem] mob:text-[1.125rem]">
-          <Link href="/projects/ongoing/all">See all Projects</Link>
+          <Link href="/projects/completed/all">See all Projects</Link>
         </div>
       </div>
       <div className=" bg-white pt-[5rem] mob:pt-[2rem] pb-[3rem] 1xl:pb-[5rem]">
