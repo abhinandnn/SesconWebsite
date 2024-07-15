@@ -17,6 +17,7 @@ import Reach from "@/components/reach";
 import Footer from "@/components/footer";
 import ProjectCard1 from "@/components/projectCard1";
 import Link from "next/link";
+import { FadeInSection } from "@/utils/animation";
 function Home() {
   return (
     <div className="font-lexend w-11/12 mx-auto">
@@ -36,47 +37,60 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-white pt-[4.5rem]  mini1:flex-col mini1:gap-4 flex justify-between">
-        <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem] leading-none w-[8rem] min-w-fit text-[#B33F0F]">
-          Ongoing Projects
+      <FadeInSection>
+        {" "}
+        <div className="bg-white pt-[4.5rem]  mini1:flex-col mini1:gap-4 flex justify-between">
+          <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem] leading-none w-[8rem] min-w-fit text-[#B33F0F]">
+            Ongoing Projects
+          </div>
+          <div className="text-[1.75rem] sm:text-[1.5rem] mob:text-[1.125rem]">
+            <Link href="/projects/ongoing/all">See all Projects</Link>
+          </div>
         </div>
-        <div className="text-[1.75rem] sm:text-[1.5rem] mob:text-[1.125rem]">
-          <Link href="/projects/ongoing/all">See all Projects</Link>
-        </div>
-      </div>
-      <div className=" bg-white pt-[5rem] mob:pt-[2rem] pb-[3rem] 1xl:pb-[5rem]">
-        <div className="flex 1xl:flex-col 1xl:justify-center 1xl:items-center 1xl:gap-[4rem] justify-between 1xl:pb-[4rem]">
-          <ProjectCard1
-            name="DCM SHRIRAM PLANT, JHAGADIA, GUJARAT"
-            type="Commercial, Industrial"
-          />
-          <ProjectCard1 name="Project 2" type="Type 2" />
-        </div>
-        <div className="1xl:flex flex-col hidden gap-[4rem] justify-center items-center">
-          <ProjectCard1 name="Project 2" type="Type 2" />
-          <ProjectCard1 name="Project 2" type="Type 2" />
-          <ProjectCard1 name="Project 2" type="Type 2" />
-        </div>
-        <div>
-          <div className="flex justify-between 1xl:hidden">
-            <div className="scale-65 m-[-7rem]">
-              {" "}
+      </FadeInSection>
+
+      <FadeInSection>
+        <div className=" bg-white pt-[5rem] mob:pt-[2rem] pb-[3rem] 1xl:pb-[5rem]">
+          <FadeInSection>
+            {" "}
+            <div className="flex 1xl:flex-col 1xl:justify-center 1xl:items-center 1xl:gap-[4rem] justify-between 1xl:pb-[4rem]">
               <ProjectCard1
                 name="DCM SHRIRAM PLANT, JHAGADIA, GUJARAT"
                 type="Commercial, Industrial"
               />
+              <ProjectCard1 name="Project 2" type="Type 2" />
             </div>
-            <div className="scale-65 m-[-7rem]">
-              {" "}
-              <ProjectCard1 name="Project 3" type="Type 3" />
+          </FadeInSection>
+
+          <FadeInSection>
+            <div className="1xl:flex flex-col hidden gap-[4rem] justify-center items-center">
+              <ProjectCard1 name="Project 2" type="Type 2" />
+              <ProjectCard1 name="Project 2" type="Type 2" />
+              <ProjectCard1 name="Project 2" type="Type 2" />
             </div>
-            <div className="scale-65 m-[-7rem]">
-              {" "}
-              <ProjectCard1 name="Project 3" type="Type 3" />
+          </FadeInSection>
+
+          <div>
+            <div className="flex justify-between 1xl:hidden">
+              <div className="scale-65 m-[-7rem]">
+                {" "}
+                <ProjectCard1
+                  name="DCM SHRIRAM PLANT, JHAGADIA, GUJARAT"
+                  type="Commercial, Industrial"
+                />
+              </div>
+              <div className="scale-65 m-[-7rem]">
+                {" "}
+                <ProjectCard1 name="Project 3" type="Type 3" />
+              </div>
+              <div className="scale-65 m-[-7rem]">
+                {" "}
+                <ProjectCard1 name="Project 3" type="Type 3" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </FadeInSection>
     </div>
   );
 }
