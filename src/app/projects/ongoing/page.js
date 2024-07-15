@@ -32,7 +32,7 @@ function Home() {
           <div className="text-[5rem] md1:text-[3.75rem] mob1:text-[2.5rem] mini1:text-[1.875rem]">Crafted with Love and Care</div>
         </div>
       </div>
-      <div className="bg-white pt-[4.5rem] mob:px-[6vw] px-[4vw] mini1:flex-col flex justify-between">
+      <div className="bg-white pt-[4.5rem] mini1:pt-[2rem] mob:px-[6vw] px-[4vw] mini1:flex-col mini1:gap-4 flex justify-between">
         <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem] leading-none w-[8rem] min-w-fit text-[#B33F0F]">
           Ongoing Projects
         </div>
@@ -42,8 +42,8 @@ function Home() {
         </Link>
         </div>
       </div>
-       <div className="px-[4vw] mob:px-[6vw] bg-white pt-[5rem] pb-[3rem] 1xl:pb-[5rem]">
-        <div className="flex 1xl:flex-col 1xl:justify-center 1xl:items-center 1xl:gap-[4rem] justify-between 1xl:pb-[4rem]">
+       <div className="px-[4vw] mob:mx-auto mob:px-[15px]  bg-white pt-[5rem] pb-[3rem] 1xl:pb-[5rem]">
+        <div className="flex 1xl:flex-col  1xl:justify-center 1xl:items-center 1xl:gap-[4rem] justify-between 1xl:pb-[4rem]">
         <ProjectCard1 name="DCM SHRIRAM PLANT, JHAGADIA, GUJARAT" type="Commercial, Industrial"/>
         <ProjectCard1 name="Project 2" type="Type 2"/>
         </div>

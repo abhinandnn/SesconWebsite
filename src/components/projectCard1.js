@@ -2,8 +2,8 @@ import React from 'react'
 
 function ProjectCard1(props) {
   return (
-    <div className='w-[40rem]  md1:w-[32rem] mob1:w-[26rem] mob:w-[20rem] flex flex-col'>
-        <img src="/img1.svg" className='w-[40rem] object-cover md1:w-[32rem] mob1:w-[26rem] mob1:h-[32rem] mob:w-[20rem] mob:h-[26rem] md1:h-[38rem] h-[50rem]'/>
+    <div className='w-[40rem] mob:w-11/12 mob:mx-auto  md1:w-[32rem] mob1:w-[100%]  flex flex-col'>
+        <img src="/img1.svg" className='w-[40rem] object-cover md1:w-[32rem] mob1:w-[100%] mob1:h-[32rem] mob:w-[100%] mob:h-[26rem] md1:h-[38rem] h-[50rem]'/>
         <div className='text-[2rem] md1:text-[1.75rem] mob1:text-[1.5rem] mob:text-[1.375rem] text-[#B33F0F] border-b border-[#B33F0F] font-bold py-2'>
             {props.name}
             </div>
