@@ -16,18 +16,18 @@ const Footer = () => {
     <FadeInSection>
       <div className=" absolute top-[100%] w-[100vw] h-fit bg-[#B33F0F] p-10 flex justify-between flex-wrap md:grid md:grid-cols-1">
         {/* first part */}
-        <div className=" w-fit flex flex-col items-start gap-8 text-white md:mt-28">
-          <div className=" font-bold text-[24px]">Quick Links</div>
-          <div className=" grid grid-cols-2 font-normal text-[24px] leading-4 gap-8">
+        <div className=" w-fit flex flex-col items-start gap-8 text-white md:mt-28 ">
+          <div className=" font-bold text-[24px] mob1:text-[18px]">Quick Links</div>
+          <div className=" grid grid-cols-2 font-normal text-[24px] leading-4 gap-8 mob1:text-[18px]">
             {quickLinks.map((item, index) => (
               <div key={index}>{item}</div>
             ))}
           </div>
         </div>
         {/* first part */}
-        <div className=" flex flex-col items-start gap-8 text-white w-[343px] mb-2 md:mt-16">
-          <div className=" font-bold text-[24px]">Contact us</div>
-          <div className=" flex flex-col font-normal text-[20px] leading-7 gap-8">
+        <div className=" flex flex-col items-start gap-8 text-white w-[343px] mob1:w-fit mb-2 md:mt-16">
+          <div className=" font-bold text-[24px] mob1:text-[18px]">Contact us</div>
+          <div className=" flex flex-col font-normal text-[20px] leading-7 gap-8 mob1:text-[16px]">
             {contactUs.map((item, index) => (
               <div key={index} className=" flex gap-2">
                 <img src={item.img} />

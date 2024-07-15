@@ -10,7 +10,7 @@ export default function Company() {
   };
 
   return (
-    <div className=" mt-[72px] overflow-x-hidden w-11/12 mx-auto grid grid-cols-[279px,auto] lg:grid-cols-[209px,auto] md1:grid-cols-1 gap-16">
+    <div className=" mt-[72px] mob1:mt-0 overflow-x-hidden w-11/12 mx-auto grid grid-cols-[279px,auto] lg:grid-cols-[209px,auto] md1:grid-cols-1 gap-16">
       <FadeInSection>
         {" "}
         <div className=" md1:hidden lg:w-[209px]  flex flex-col gap-14 leading-8 text-[22px] text-[#888888] font-medium justify-start cursor-pointer fixed ">
@@ -47,7 +47,7 @@ export default function Company() {
 
       <FadeInSection>
         {" "}
-        <div className=" h-fit flex flex-col gap-16" id="management">
+        <div className=" h-fit flex flex-col gap-16 mob1:gap-0" id="management">
           <div>
             {managementTeam.map((item, index) => (
               <FadeInSection>
@@ -70,7 +70,7 @@ export default function Company() {
                       </div>
                       <div className="text-[16px] leading-4">{item.role}</div>
                     </div>
-                    <div className="text-left  line-clamp-11 sm:mt-3 sm:line-clamp-3 ">
+                    <div className="text-left  line-clamp-11 sm:mt-3 sm:line-clamp-3 mob1:text-[16px] ">
                       {item.description}
                     </div>
                   </div>

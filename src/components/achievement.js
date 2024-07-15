@@ -7,10 +7,10 @@ const Achievement = () => {
         <div className="flex items-end gap-[41px]">
           <img src="/trail.svg" />
           <div className=" flex items-end gap-[41px] mob1:flex-col mob1:items-start mob1:gap-0 ">
-            <div className="text-[2.5rem] mob:text-[1.5rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#B33F0F] leading-[40px] font-bold ">
+            <div className="text-[2.5rem] mob:text-[1.75rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#B33F0F] leading-[40px] font-bold ">
               1500+
             </div>
-            <div className="text-[2.2rem] mob:text-[1.5rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#000] leading-[36px] font-[400] ">
+            <div className="text-[2.2rem] mob:text-[1.3rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#000] leading-[36px] font-[400] ">
               Active Experts
             </div>
           </div>
@@ -23,10 +23,10 @@ const Achievement = () => {
         <div className="flex items-end gap-[41px]">
           <img src="/trail.svg" />
           <div className=" flex items-end gap-[41px] mob1:flex-col mob1:items-start mob1:gap-0 ">
-            <div className="text-[2.5rem] mob:text-[1.5rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#B33F0F] leading-[40px] font-bold ">
+            <div className="text-[2.5rem] mob:text-[1.75rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#B33F0F] leading-[40px] font-bold ">
               1500+
             </div>
-            <div className="text-[2.2rem] mob:text-[1.5rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#000] leading-[36px] font-[400] ">
+            <div className="text-[2.2rem] mob:text-[1.3rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#000] leading-[36px] font-[400] ">
               Active Experts
             </div>
           </div>
@@ -39,10 +39,10 @@ const Achievement = () => {
         <div className="flex items-end gap-[41px]">
           <img src="/trail.svg" />
           <div className=" flex items-end gap-[41px] mob1:flex-col mob1:items-start mob1:gap-0 ">
-            <div className="text-[2.5rem] mob:text-[1.5rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#B33F0F] leading-[40px] font-bold ">
+            <div className="text-[2.5rem] mob:text-[1.75rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#B33F0F] leading-[40px] font-bold ">
               1500+
             </div>
-            <div className="text-[2.2rem] mob:text-[1.5rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#000] leading-[36px] font-[400] ">
+            <div className="text-[2.2rem] mob:text-[1.3rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#000] leading-[36px] font-[400] ">
               Active Experts
             </div>
           </div>
@@ -55,10 +55,10 @@ const Achievement = () => {
         <div className="flex items-end gap-[41px]">
           <img src="/trail.svg" />
           <div className=" flex items-end gap-[41px] mob1:flex-col mob1:items-start mob1:gap-0 ">
-            <div className="text-[2.5rem] mob:text-[1.5rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#B33F0F] leading-[40px] font-bold ">
+            <div className="text-[2.5rem] mob:text-[1.75rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#B33F0F] leading-[40px] font-bold ">
               1500+
             </div>
-            <div className="text-[2.2rem] mob:text-[1.5rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#000] leading-[36px] font-[400] ">
+            <div className="text-[2.2rem] mob:text-[1.3rem] sm:text-[1.75rem] lg1:text-[2rem] text-[#000] leading-[36px] font-[400] ">
               Active Experts
             </div>
           </div>

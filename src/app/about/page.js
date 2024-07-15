@@ -40,8 +40,8 @@ const responsive = {
 function Home() {
   return (
     <div className="font-lexend h-fit">
-      <FadeInSection>
-        <div className="h-[92vh] mob:h-[60vh] bg-transparent text-white">
+      
+      <div className="h-[92vh] mob:h-[60vh] bg-transparent text-white">
           <BackgroundSlider
             images={["/img1.svg", "/img2.svg", "/img3.svg"]}
             duration={4}
@@ -51,7 +51,7 @@ function Home() {
             <div className="text-[2rem] mob:text-[1.25rem] sm:text-[1.5rem] lg1:text-[1.75rem] pt-[5rem]">
               We Build Your
             </div>
-            <div className="text-[10rem] mini1:text-[5.75rem] mob:text-[6.25rem] sm:text-[7.25rem] lg1:text-[8.375rem] leading-none font-bold">
+            <div className="text-[10rem] mini1:text-[4.75rem] ] mob:text-[6.25rem] sm:text-[7.25rem] lg1:text-[8.375rem] leading-none font-bold">
               Dreams
             </div>
             <div className="text-[2rem] mob:text-[1.25rem] sm:text-[1.5rem] lg1:text-[1.75rem]">
@@ -59,14 +59,14 @@ function Home() {
             </div>
           </div>
         </div>
-      </FadeInSection>
+      
 
       <FadeInSection>
-        <div className="bg-white pt-[4.5rem] px-[4vw] flex gap-[6rem] lg:flex-col lg:gap-5">
-          <div className="text-[2.5rem] leading-none w-[8rem] min-w-fit text-[#B33F0F] pt-1">
+        <div className="bg-white pt-[4.5rem] px-[4vw] font-normal flex gap-[6rem] lg:flex-col lg:gap-5">
+          <div className="text-[2.5rem] mob1:text-[24px] leading-none w-[8rem] min-w-fit text-[#B33F0F] pt-1">
             ABOUT COMPANY
           </div>
-          <div className="text-[2rem]">
+          <div className="text-[2rem] mob1:text-[18px]">
             Sescon Builders Pvt. Ltd. is a revolutionary emergence in the field
             of civil construction, based on ethics of professionalism and to
             create versatility in construction industry. Because of the
@@ -89,16 +89,16 @@ function Home() {
         </div>
       </FadeInSection>
       <FadeInSection>
-        <div className="mx-auto mt-[72px] w-fit">
-          <img src="/aboutBanner.svg" alt="About Banner" />
+        <div className="mx-auto mob1:w-f mt-[72px] mob1:px-[4vw] w-fit">
+          <img src="/aboutBanner.svg" className="" alt="About Banner" />
         </div>
       </FadeInSection>
       <FadeInSection>
         <div className="bg-white pt-[4.5rem] px-[4vw] flex gap-[6rem] lg:flex-col lg:gap-5">
-          <div className="text-[2.5rem] leading-none w-[8rem] min-w-fit text-[#B33F0F] pt-2">
+          <div className="text-[2.5rem] leading-none w-[8rem] mob1:text-[24px] min-w-fit text-[#B33F0F] pt-2">
             OUR MISSION
           </div>
-          <div className="text-[2rem]">
+          <div className="text-[2rem] mob1:text-[18px]">
             At Sescon Builders our mission is to deliver professional
             construction services based on quality craftsmanship in a timely
             manner. Committed to our mission we will create value for our
@@ -122,11 +122,11 @@ function Home() {
         </div>
       </FadeInSection>
       <FadeInSection>
-        <div className="w-11/12 mt-[72px] mx-auto flex flex-col gap-[63px] text-[#B33F0F] font-normal">
-          <div className="text-[2.5rem] leading-[60px]">
+        <div className="w-11/12 mt-[72px] mx-auto flex flex-col gap-[63px] mob1:gap-10 text-[#B33F0F] font-normal">
+          <div className="text-[2.5rem] leading-[60px] mob1:text-[24px] mob1:leading-9">
             WHAT MAKE US STAND OUT
           </div>
-          <div className="text-[1.5rem]">
+          <div className="text-[1.5rem] mob1:text-[24px]">
             {aboutData.map((item, index) => (
               <FadeInSection>
                 <div
@@ -153,10 +153,10 @@ function Home() {
                     <div>
                       <img src={item.logo} alt={`Logo ${index}`} />
                     </div>
-                    <div className="text-[2rem] font-semibold">
+                    <div className="text-[2rem] mob1:text-[24px] font-normal">
                       {item.title}
                     </div>
-                    <div className="self-end text-black mt-8 font-medium leading-8">
+                    <div className="self-end text-black mob1:text-[18px] mt-8 mob1:mt-0 font-normal leading-8">
                       {item.description}
                     </div>
                   </div>
@@ -167,12 +167,12 @@ function Home() {
         </div>
       </FadeInSection>
       <FadeInSection>
-        <div className="w-11/12 mx-auto pt-[3rem]  flex gap-[4rem] pb-9">
+        <div className="w-11/12 mx-auto pt-[3rem] mob1:pt-0  flex gap-[4rem] pb-9">
           <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem]  leading-none w-[8rem] min-w-fit text-[#B33F0F]">
             EQUIPMENTS TOOLS AND PLANTS
           </div>
         </div>
-        <div className="w-11/12 mx-auto pb-[5rem] pt-[3rem]">
+        <div className="w-11/12 mx-auto pb-[5rem] pt-[3rem] mob1:pt-0">
           <Carousel responsive={responsive}>
             <ProjectCard backgroundUrl="/img1.svg" />
             <ProjectCard backgroundUrl="/img2.svg" />

@@ -49,7 +49,7 @@ function Home() {
   };
   return (
     <div className="font-lexend h-fit">
-      <FadeInSection>
+      
         <div className="h-[92vh] mob:h-[60vh] bg-transparent text-white">
           <BackgroundSlider
             images={["/img1.svg", "/img2.svg", "/img3.svg"]}
@@ -60,7 +60,7 @@ function Home() {
             <div className="text-[2rem] mob:text-[1.25rem] sm:text-[1.5rem] lg1:text-[1.75rem] pt-[5rem]">
               We Build Your
             </div>
-            <div className="text-[10rem] mini1:text-[5.75rem] mob:text-[6.25rem] sm:text-[7.25rem] lg1:text-[8.375rem] leading-none font-bold">
+            <div className="text-[10rem] mini1:text-[4.75rem] ] mob:text-[6.25rem] sm:text-[7.25rem] lg1:text-[8.375rem] leading-none font-bold">
               Dreams
             </div>
             <div className="text-[2rem] mob:text-[1.25rem] sm:text-[1.5rem] lg1:text-[1.75rem]">
@@ -68,11 +68,11 @@ function Home() {
             </div>
           </div>
         </div>
-      </FadeInSection>
+      
 
       <FadeInSection>
-        <div className="bg-white md1:flex-col md1:gap-[3rem] mob:gap-[2rem] pt-[4.5rem] mob:px-[6vw] px-[4vw] flex gap-[6rem]">
-          <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem] leading-none w-[8rem] min-w-fit text-[#B33F0F]">
+        <div className="bg-white  md1:flex-col md1:gap-[3rem] mob:gap-[2rem] pt-[4.5rem] mob:px-[6vw] px-[4vw] flex gap-[6rem]">
+          <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem] mini1:text-[24px] leading-none w-[8rem] min-w-fit text-[#B33F0F]">
             ABOUT US
           </div>
           <div className="text-[2rem] sm:text-[1.5rem] mob:text-[1.15rem]">
@@ -91,7 +91,7 @@ function Home() {
       </FadeInSection>
 
       <FadeInSection>
-        <div className="bg-white pb-[2rem] pt-[4.5rem] mob:px-[6vw] px-[4vw] xl:flex-col-reverse xl:gap-[3rem] flex gap-[6rem]">
+        <div className="bg-white pb-[2rem] w-11/12 mx-auto pt-[4.5rem]   xl:flex-col-reverse xl:gap-[3rem] flex gap-[6rem]">
           <div className="md1:hidden">
             <SimpleImageSlider
               width={770}
@@ -121,8 +121,8 @@ function Home() {
           </div>
           <div className="mob:flex hidden">
             <SimpleImageSlider
-              width={370}
-              height={370}
+              width={330}
+              height={330}
               images={["/img1.svg", "/img2.svg", "/img3.svg"]}
               slideDuration={0.5}
               autoPlay={true}

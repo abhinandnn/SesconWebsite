@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 const Clients = () => {
   return (
     <div className="  w-11/12 mx-auto flex gap-[64px] flex-col mb-[104px]">
-    <div className="text-[2.5rem] leading-none w-[8rem] font-[400] min-w-fit text-[#B33F0F]">
+    <div className="text-[2.5rem] mob1:text-[24px] leading-none w-[8rem] font-[400] min-w-fit text-[#B33F0F]">
         OUR Clients
       </div>
       <Marquee gradient={false} speed={60} pauseOnHover='true'>

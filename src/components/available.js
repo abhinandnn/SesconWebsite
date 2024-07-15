@@ -10,7 +10,7 @@ const Available = () => {
         <div>
           <img src="/India.svg" />
         </div>
-        <div className="sm:text-[1.5rem] mob:text-[1.15rem] text-[32px] text-black leading-[44.4px] font-[400] flex flex-col gap-16 sm:gap-8 pb-[40px]">
+        <div className="sm:text-[1.5rem] mob:text-[1rem] text-[32px] text-black leading-[44.4px] mob1:leading-7 font-[400] flex flex-col gap-16 sm:gap-8 pb-[40px]">
           <div>
             Sescon Builders Pvt. Ltd. is committed to delivering high-quality
             construction services across a wide geographic area. We are pleased

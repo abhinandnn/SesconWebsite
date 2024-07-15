@@ -1,0 +1,36 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REPLY
+BEGIN:VEVENT
+DTSTART:20240711T130000Z
+DTEND:20240711T140000Z
+DTSTAMP:20240710T130030Z
+ORGANIZER;CN=ssomvishwari786@gmail.com:mailto:ssomvishwari786@gmail.com
+UID:4h6qpnd15nk3atp3382ll59tic@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Nagesh
+  bansal;X-NUM-GUESTS=0:mailto:bansalnagesh@gmail.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/ita-zmua-grf
+CREATED:20240709T171624Z
+DESCRIPTION:Event Name: Interview\n\nLocation: This is a Google Meet web co
+ nference.\nYou can join this meeting from your computer\, tablet\, or smart
+ phone.\nhttps://calendly.com/events/fa9b9a03-53f1-41a5-bff1-241984e1ba1d/go
+ ogle_meet\n\nPlease share anything that will help prepare for our meeting.:
+  Please set up your dev environment\n\nNeed to make changes to this event?\
+ nCancel: https://calendly.com/cancellations/dcea9b97-76a3-40d8-8332-fadd262
+ aeee9\nReschedule: https://calendly.com/reschedulings/dcea9b97-76a3-40d8-83
+ 32-fadd262aeee9\n\nPowered by Calendly.com\n\n\n-::~:~::~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nJoin with Goo
+ gle Meet: https://meet.google.com/ita-zmua-grf\n\nLearn more about Meet at:
+  https://support.google.com/a/users/answer/9282720\n\nPlease do not edit th
+ is section.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20240710T130029Z
+LOCATION:Google Meet (instructions in description)
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Nagesh bansal and Som Gupta
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
