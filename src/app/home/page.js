@@ -6,12 +6,14 @@ import SimpleImageSlider from "react-simple-image-slider";
 import Achievement from "@/components/achievement";
 import Available from "@/components/available";
 import Clients from "@/components/clients";
-import AllCollapseExample from "@/components/faq";
+import FAQ from "@/components/faq";
 import Reach from "@/components/reach";
 import Footer from "@/components/footer";
 import ProjectCard from "@/components/projectCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import axios from "@/api/axios";
+import { useEffect, useState } from "react";
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -47,12 +49,41 @@ function Home() {
     slidesToShow: 3,
     slidesToScroll: 3,
   };
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get("/home-page?populate=deep") // Replace with your actual API endpoint
+      .then((response) => {
+        setData(response.data.data); // Assuming the data comes in this format
+      })
+      .catch((error) => {
+        console.error("Error fetching the data", error);
+      });
+  }, []);
+
+  if (!data) {
+    return <div>Loading...</div>;
+  }
+
+
+  const heroImages = data.attributes.hero_section_imgs.data.map(
+    (img) => img.attributes.url
+  );
+  const aboutUsText = data.attributes.aboutus_text;
+  const aboutUsImages = data.attributes.aboutus_carousel_imgs.data.map(
+    (img) => img.attributes.url
+  );
+  const projectCards = data.attributes.project_card;
+  const clientImages = data.attributes.our_client_imgs.data.map(
+    (img) => img.attributes.url
+  );
   return (
     <div className="font-lexend h-fit">
-      
         <div className="h-[92vh] mob:h-[60vh] bg-transparent text-white">
           <BackgroundSlider
-            images={["/img1.svg", "/img2.svg", "/img3.svg"]}
+            images={heroImages}
             duration={4}
             transition={2}
           />
@@ -76,16 +107,7 @@ function Home() {
             ABOUT US
           </div>
           <div className="text-[2rem] sm:text-[1.5rem] mob:text-[1.15rem]">
-            Sescon Builders Pvt. Ltd. is a revolutionary emergence in the field
-            of civil construction, based on ethics of professionalism and to
-            create versatility in construction industry. Because of the
-            Professional needs associated with the projects and construction
-            management, we are uniquely positioned to meet and exceed our
-            client’s expectations. Our client's schedule and budget goals guide
-            the decision making process. All projects regardless of scope or
-            scale, commence with responsive analysis followed by the use of
-            appropriately chosen, field – proven project management techniques
-            to ensure projects delivery success.
+           {aboutUsText}
           </div>
         </div>
       </FadeInSection>
@@ -96,7 +118,7 @@ function Home() {
             <SimpleImageSlider
               width={770}
               height={770}
-              images={["/img1.svg", "/img2.svg", "/img3.svg"]}
+              images={aboutUsImages}
               slideDuration={0.5}
               autoPlay={true}
             />
@@ -105,7 +127,7 @@ function Home() {
             <SimpleImageSlider
               width={570}
               height={570}
-              images={["/img1.svg", "/img2.svg", "/img3.svg"]}
+              images={aboutUsImages}
               slideDuration={0.5}
               autoPlay={true}
             />
@@ -114,7 +136,7 @@ function Home() {
             <SimpleImageSlider
               width={470}
               height={470}
-              images={["/img1.svg", "/img2.svg", "/img3.svg"]}
+              images={aboutUsImages}
               slideDuration={0.5}
               autoPlay={true}
             />
@@ -123,7 +145,7 @@ function Home() {
             <SimpleImageSlider
               width={330}
               height={330}
-              images={["/img1.svg", "/img2.svg", "/img3.svg"]}
+              images={aboutUsImages}
               slideDuration={0.5}
               autoPlay={true}
             />
@@ -161,15 +183,9 @@ function Home() {
         {" "}
         <div className="w-11/12 mx-auto pb-[5rem] pt-[3rem]">
           <Carousel responsive={responsive}>
-            <ProjectCard backgroundUrl="/img1.svg" />
-            <ProjectCard backgroundUrl="/img2.svg" />
-            <ProjectCard backgroundUrl="/img3.svg" />
-            <ProjectCard backgroundUrl="/img1.svg" />
-            <ProjectCard backgroundUrl="/img2.svg" />
-            <ProjectCard backgroundUrl="/img3.svg" />
-            <ProjectCard backgroundUrl="/img1.svg" />
-            <ProjectCard backgroundUrl="/img2.svg" />
-            <ProjectCard backgroundUrl="/img3.svg" />
+            {projectCards.map((project) => (
+            <ProjectCard card={project} />
+            ))}
           </Carousel>
         </div>
       </FadeInSection>
@@ -181,11 +197,11 @@ function Home() {
         <Available />
       </FadeInSection>
       <FadeInSection>
-        <Clients />
+        <Clients clients={clientImages}/>
       </FadeInSection>
       <FadeInSection>
         {" "}
-        <AllCollapseExample />
+        <FAQ QnA={data.attributes.QnA}/>
       </FadeInSection>
       <FadeInSection>
         <Reach section="Home" />
