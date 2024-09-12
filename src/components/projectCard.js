@@ -2,7 +2,7 @@ import React from "react";
 
 function ProjectCard(props) {
   const cardStyle = {
-    backgroundImage: `url(${props.backgroundUrl})`,
+    backgroundImage: `url(${props.card.image.data.attributes.url})`,
   };
   return (
     <div
@@ -16,10 +16,10 @@ function ProjectCard(props) {
           </button>
           <div className="absolute bottom-0 p-[1.8rem] group-hover:py-[1rem]">
             <div className="text-[1.375rem] text-white">
-              Great building of Senorita- A way to heaven 
+              {props.card.title}
             </div>
             <div className="text-[1rem] group-hover:hidden text-white">
-              Unknown printer took a galley of type and scrambled it to make a 
+              {props.card.description}
             </div>
           </div>
         </div>
