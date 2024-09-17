@@ -115,9 +115,7 @@ function Contact() {
               </div>
               <div>
                 <span className="text-[1.375rem] md:text-[1.25rem] mob:text-[1.125rem]">
-                  ABN: 95 111 941 792
                   <br />
-                  Lic No. 173 639 C
                 </span>
               </div>
             </div>
@@ -202,9 +200,7 @@ function Contact() {
 
               <div>
                 <span className="text-[1.375rem] md:text-[1.25rem] mob:text-[1.125rem]">
-                  ABN: 95 111 941 792
                   <br />
-                  Lic No. 173 639 C
                 </span>
               </div>
             </div>
