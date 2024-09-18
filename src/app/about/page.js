@@ -81,17 +81,10 @@ function Home() {
             duration={4}
             transition={2}
           />
-          <div className="px-[4vw] mob:px-[6vw]">
-            <div className="text-[2rem] mob:text-[1.25rem] sm:text-[1.5rem] lg1:text-[1.75rem] pt-[5rem]">
-              We Build Your
-            </div>
-            <div className="text-[10rem] mini1:text-[4.75rem] ] mob:text-[6.25rem] sm:text-[7.25rem] lg1:text-[8.375rem] leading-none font-bold">
-              Dreams
-            </div>
-            <div className="text-[2rem] mob:text-[1.25rem] sm:text-[1.5rem] lg1:text-[1.75rem]">
-              We deliver what we commit and we commit what we can deliver
-            </div>
-          </div>
+                 <div className="px-[4vw] mob:px-[6vw]">
+          <div className="text-[2rem] pt-[10rem] md1:pt-[18rem] md1:text-[1.675rem] mob1:text-[1.375rem] mini1:text-[1.25rem] ">Crafting Civil Solutions:</div>
+          <div className="text-[5rem] md1:text-[3.75rem] mob1:text-[2.5rem] mini1:text-[1.875rem]">Building Dreams into Reality</div>
+        </div>
         </div>
       
 
@@ -185,7 +178,7 @@ function Home() {
                   </div>
                   <div className="pt-6 px-3 pb-6 flex flex-col gap-4 w-[40.27%] lg:w-[100%]">
                     <div>
-                      <img src={item.logo} alt={`Logo ${index}`} />
+                      <img src={"/logo.svg"} alt={`Logo ${index}`} />
                     </div>
                     <div className="text-[2rem] mob1:text-[24px] font-normal">
                       {item.Title}
