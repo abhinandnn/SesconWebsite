@@ -27,12 +27,9 @@ function Home() {
           duration={4}
           transition={2}
         />
-        <div className="px-[4vw] mob:px-[6vw]">
-          <div className="text-[2rem] mob:text-[1.25rem] sm:text-[1.5rem] lg1:text-[1.75rem] pt-[5rem]">We Build Your</div>
-          <div className="text-[10rem] mini1:text-[5.75rem] mob:text-[6.25rem] sm:text-[7.25rem] lg1:text-[8.375rem] leading-none font-bold">Dreams</div>
-          <div className="text-[2rem] mob:text-[1.25rem] sm:text-[1.5rem] lg1:text-[1.75rem]">
-            We deliver what we commit and we commit what we can deliver
-          </div>
+          <div className="px-[4vw] mob:px-[6vw]">
+          <div className="text-[2rem] pt-[10rem] md1:pt-[18rem] md1:text-[1.675rem] mob1:text-[1.375rem] mini1:text-[1.25rem] ">We focus on protecting</div>
+          <div className="text-[5rem] md1:text-[3.75rem] mob1:text-[2.5rem] mini1:text-[1.875rem]">Human health and the environment</div>
         </div>
       </div>
       <div className="bg-white pt-[4.5rem] px-[4vw] mob:px-[6vw] flex gap-[4rem] lg:flex-col lg:gap-5">

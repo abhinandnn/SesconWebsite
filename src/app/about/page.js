@@ -8,6 +8,10 @@ import { Fade } from "@mui/material";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ProjectCard from "@/components/projectCard";
+import axios from "@/api/axios";
+import { useState } from "react";
+import { useEffect } from "react";
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
@@ -38,26 +42,49 @@ const responsive = {
 
 
 function Home() {
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get("/about-us-page?populate=deep") 
+      .then((response) => {
+        setData(response.data.data);
+        console.log(response.data.data)
+      })
+      .catch((error) => {
+        console.error("Error fetching the data", error);
+      });
+  }, []);
+
+  if (!data) {
+    return <div>Loading...</div>;
+  }
+
+
+  const heroImages = data.attributes.Hero_section_imgs.data.map(
+    (img) => img.attributes.url
+  );
+  const aboutUsText = data.attributes.about_company;
+  const Images = data.attributes.about_company_img.data.attributes.url
+  const projectCards = data.attributes.equipment_tools;
+  const aboutCompanyText = data.attributes.our_company;
+  const wmus= data.attributes.what_make_us_stand
+ 
+
   return (
     <div className="font-lexend h-fit">
       
       <div className="h-[92vh] mob:h-[60vh] bg-transparent text-white">
           <BackgroundSlider
-            images={["/img1.svg", "/img2.svg", "/img3.svg"]}
+            images={heroImages}
             duration={4}
             transition={2}
           />
-          <div className="px-[4vw] mob:px-[6vw]">
-            <div className="text-[2rem] mob:text-[1.25rem] sm:text-[1.5rem] lg1:text-[1.75rem] pt-[5rem]">
-              We Build Your
-            </div>
-            <div className="text-[10rem] mini1:text-[4.75rem] ] mob:text-[6.25rem] sm:text-[7.25rem] lg1:text-[8.375rem] leading-none font-bold">
-              Dreams
-            </div>
-            <div className="text-[2rem] mob:text-[1.25rem] sm:text-[1.5rem] lg1:text-[1.75rem]">
-              We deliver what we commit and we commit what we can deliver
-            </div>
-          </div>
+                 <div className="px-[4vw] mob:px-[6vw]">
+          <div className="text-[2rem] pt-[10rem] md1:pt-[18rem] md1:text-[1.675rem] mob1:text-[1.375rem] mini1:text-[1.25rem] ">Crafting Civil Solutions:</div>
+          <div className="text-[5rem] md1:text-[3.75rem] mob1:text-[2.5rem] mini1:text-[1.875rem]">Building Dreams into Reality</div>
+        </div>
         </div>
       
 
@@ -127,7 +154,7 @@ function Home() {
             WHAT MAKE US STAND OUT
           </div>
           <div className="text-[1.5rem] mob1:text-[24px]">
-            {aboutData.map((item, index) => (
+            {wmus.map((item, index) => (
               <FadeInSection>
                 <div
                   key={index}
@@ -138,7 +165,7 @@ function Home() {
                   <div className="w-[43.7%] lg:w-[100%]">
                     <img
                       className="w-full"
-                      src={item.img}
+                      src={item.img.data.attributes.url}
                       alt={`Image ${index}`}
                     />
                     <img
@@ -151,13 +178,13 @@ function Home() {
                   </div>
                   <div className="pt-6 px-3 pb-6 flex flex-col gap-4 w-[40.27%] lg:w-[100%]">
                     <div>
-                      <img src={item.logo} alt={`Logo ${index}`} />
+                      <img src={"/logo.svg"} alt={`Logo ${index}`} />
                     </div>
                     <div className="text-[2rem] mob1:text-[24px] font-normal">
-                      {item.title}
+                      {item.Title}
                     </div>
                     <div className="self-end text-black mob1:text-[18px] mt-8 mob1:mt-0 font-normal leading-8">
-                      {item.description}
+                      {item.Description}
                     </div>
                   </div>
                 </div>
@@ -174,15 +201,9 @@ function Home() {
         </div>
         <div className="w-11/12 mx-auto pb-[5rem] pt-[3rem] mob1:pt-0">
           <Carousel responsive={responsive}>
-            <ProjectCard backgroundUrl="/img1.svg" />
-            <ProjectCard backgroundUrl="/img2.svg" />
-            <ProjectCard backgroundUrl="/img3.svg" />
-            <ProjectCard backgroundUrl="/img1.svg" />
-            <ProjectCard backgroundUrl="/img2.svg" />
-            <ProjectCard backgroundUrl="/img3.svg" />
-            <ProjectCard backgroundUrl="/img1.svg" />
-            <ProjectCard backgroundUrl="/img2.svg" />
-            <ProjectCard backgroundUrl="/img3.svg" />
+          {projectCards.map((project) => (
+            <ProjectCard card={project} />
+            ))}
           </Carousel>
         </div>
       </FadeInSection>

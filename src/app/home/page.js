@@ -16,7 +16,6 @@ import axios from "@/api/axios";
 import { useEffect, useState } from "react";
 const responsive = {
   superLargeDesktop: {
-    // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
     items: 6,
   },
