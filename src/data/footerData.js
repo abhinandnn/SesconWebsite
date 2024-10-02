@@ -1,4 +1,12 @@
-export const quickLinks = ["Home","EHS","About","Carrers","Company","Contact","Project"]
+export const quickLinks = [
+    { name: "Home", path: "/" },
+    { name: "EHS", path: "/ehs" },
+    { name: "About", path: "/about" },
+    { name: "Careers", path: "/careers" },
+    { name: "Company", path: "/company" },
+    { name: "Contact", path: "/contact" },
+    { name: "Project", path: "/project" }
+  ];
 export const contactUs = [{
     address:"306, Guru Amardas Bhawan,78, Nehru Place, New Delhi – 110019",
     img:'/Vector.svg'

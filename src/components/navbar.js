@@ -96,7 +96,7 @@ function Navbar() {
                         : null
                     }
                     className={`cursor-pointer relative ${
-                      current === item.href ? "text-[#B33F0F]" : ""
+                      current === item.href ? "text-[#A9441B]" : ""
                     }`}
                   >
                     {item.name}{" "}
@@ -107,7 +107,7 @@ function Navbar() {
                 </Link>
                 {item.name === "Projects" ? (
                   <div
-                    className={`mt-3 z-50 w-fit h-fit bg-white rounded-lg px-4 py-2 flex flex-col gap-2 font-semibold text-[16px] text-[#B33F0F] leading-6 cursor-pointer transition-opacity duration-300 ${
+                    className={`mt-3 z-50 w-fit h-fit bg-white rounded-lg px-4 py-2 flex flex-col gap-2 font-semibold text-[16px] text-[#A9441B] leading-6 cursor-pointer transition-opacity duration-300 ${
                       hover ? "opacity-100" : "opacity-0"
                     }`}
                   >
@@ -154,7 +154,7 @@ function Navbar() {
                       onClick={() => setCurrent(item.href)}
                       className={classNames(
                         current === item.href
-                          ? " text-[#B33F0F]"
+                          ? " text-[#A9441B]"
                           : "text-[#4F4F4F] hover:bg-[#FFF7ED]",
                         "block  px-3 py-2  font-medium"
                       )}

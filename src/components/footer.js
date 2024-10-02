@@ -6,21 +6,23 @@ import { badges } from "@/data/footerData";
 import { socialMedia } from "@/data/footerData";
 import { motion } from "framer-motion";
 import { FadeInSection } from "@/utils/animation";
+import { useRouter } from "next/navigation";
 
 const Footer = () => {
+  const router = useRouter();
   const variant = {
     visible: { scale: 1 },
     hidden: { scale: 0 },
   };
   return (
     <FadeInSection>
-      <div className=" absolute top-[100%] w-[100vw] h-fit bg-[#B33F0F] p-10 flex justify-between flex-wrap md:grid md:grid-cols-1">
+      <div className=" absolute top-[100%] w-[100vw]  h-fit bg-[#A9441B] p-10 flex justify-between flex-wrap md:grid md:grid-cols-1">
         {/* first part */}
-        <div className=" w-fit flex flex-col items-start gap-8 text-white md:mt-28 ">
+        <div className=" w-fit flex flex-col items-start gap-8 text-white md:mt-28 cursor-pointer ">
           <div className=" font-bold text-[24px] mob1:text-[18px]">Quick Links</div>
           <div className=" grid grid-cols-2 font-normal text-[24px] leading-4 gap-8 mob1:text-[18px]">
             {quickLinks.map((item, index) => (
-              <div  key={index}>{item}</div>
+              <div onClick={()=>router.push(item.path)}  key={index}>{item.name}</div>
             ))}
           </div>
         </div>

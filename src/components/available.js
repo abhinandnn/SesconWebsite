@@ -3,7 +3,7 @@ import React from "react";
 const Available = () => {
   return (
     <div className=" w-11/12 mx-auto flex gap-[64px] flex-col mb-[104px]">
-      <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem]  leading-none w-[8rem] font-[400] min-w-fit text-[#B33F0F]">
+      <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem]  leading-none w-[8rem] font-[400] min-w-fit text-[#A9441B]">
         OUR AVAILABILITY
       </div>
       <div className=" grid grid-cols-2 gap-[93px] md1:grid-cols-1">
@@ -21,7 +21,7 @@ const Available = () => {
             No matter where your project is located within these states, you can
             trust Sescon Builders Pvt. Ltd. to provide exceptional service and
             craftsmanship.{" "}
-            <span className=" font-[700] text-[#B33F0F] underline">
+            <span className=" font-[700] text-[#A9441B] underline">
               Contact us{" "}
             </span>{" "}
             today to discuss your construction needs and how we can help bring
