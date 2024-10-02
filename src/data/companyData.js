@@ -24,3 +24,84 @@ export const managementTeam = [
     img: "/business.svg",
   }
 ];
+
+export const technicalLead =[{
+  title:"MR. VINAY LAAD",
+  type:"Assistant Vice President (Projects)",
+  description:"Degree in Civil Engineering with 28 Year of experience in construction.",
+  colour:"#FFF7ED"
+}]
+
+export const technicalProject =[{
+  title:"MR. VINAY LAAD",
+  type:"Project Manager",
+  description:"Diploma In Civil Engineering With 20 Years Of Experience In Construction.",
+  colour:"#FFF7ED"
+},{
+  title:"MR. VINAY LAAD",
+  type:"Project Manager",
+  description:"Diploma In Civil Engineering With 20 Years Of Experience In Construction.",
+  colour:"#FFF7ED"
+},{
+  title:"MR. VINAY LAAD",
+  type:"Project Manager",
+  description:"Diploma In Civil Engineering With 20 Years Of Experience In Construction.",
+  colour:"#FFF7ED"
+},{
+  title:"MR. VINAY LAAD",
+  type:"Project Manager",
+  description:"Diploma In Civil Engineering With 20 Years Of Experience In Construction.",
+  colour:"#FFF7ED"
+},{
+  title:"MR. VINAY LAAD",
+  type:"Project Manager",
+  description:"Diploma In Civil Engineering With 20 Years Of Experience In Construction.",
+  colour:"#FFF7ED"
+},{
+  title:"MR. VINAY LAAD",
+  type:"Project Manager",
+  description:"Diploma In Civil Engineering With 20 Years Of Experience In Construction.",
+  colour:"#FFF7ED"
+},{
+  title:"MR. VINAY LAAD",
+  type:"Project Manager",
+  description:"Diploma In Civil Engineering With 20 Years Of Experience In Construction.",
+  colour:"#FFF7ED"
+},{
+  title:"MR. VINAY LAAD",
+  type:"Project Manager",
+  description:"Diploma In Civil Engineering With 20 Years Of Experience In Construction.",
+  colour:"#FFF7ED"
+},{
+  title:"MR. VINAY LAAD",
+  type:"Project Manager",
+  description:"Diploma In Civil Engineering With 20 Years Of Experience In Construction.",
+  colour:"#FFF7ED"
+},]
+
+export const technicalEstimation =[{
+  title:"MR. VINAY LAAD",
+  type:"Project Manager",
+  description:"Diploma In Civil Engineering With 20 Years Of Experience In Construction.",
+  colour:"#FFF7ED"
+},{
+  title:"MR. VINAY LAAD",
+  type:"Project Manager",
+  description:"Diploma In Civil Engineering With 20 Years Of Experience In Construction.",
+  colour:"#FFF7ED"
+},{
+  title:"MR. VINAY LAAD",
+  type:"Project Manager",
+  description:"Diploma In Civil Engineering With 20 Years Of Experience In Construction.",
+  colour:"#FFF7ED"
+},{
+  title:"MR. VINAY LAAD",
+  type:"Project Manager",
+  description:"Diploma In Civil Engineering With 20 Years Of Experience In Construction.",
+  colour:"#FFF7ED"
+},{
+  title:"MR. VINAY LAAD",
+  type:"Project Manager",
+  description:"Diploma In Civil Engineering With 20 Years Of Experience In Construction.",
+  colour:"#FFF7ED"
+}]

@@ -1,5 +1,10 @@
 "use client";
-import { managementTeam } from "@/data/companyData";
+import {
+  managementTeam,
+  technicalEstimation,
+  technicalLead,
+  technicalProject,
+} from "@/data/companyData";
 import { useState, useEffect } from "react";
 import { FadeInSection } from "@/utils/animation";
 
@@ -83,6 +88,78 @@ export default function Company() {
               <img className=" w-full" src="chart.svg" />
             </div>
           </FadeInSection>
+          <div className=" flex flex-col gap-7 mob1:mt">
+          <div className="grid grid-cols-1 max-w-[440px] gap-5 mb-[72px] ">
+              {technicalLead.map((dataItem, index) => (
+                
+                  <div
+                    className={`flex flex-col gap-4 rounded h-fit p-8 mob1:p-3 text-black font-normal text-[20px] leading-[30px] mob1:leading-6 relative `}
+                    key={index}
+                    style={{ backgroundColor: dataItem.colour }}
+                  >
+                    <div className="flex flex-col gap-2">
+                      <div className="text-[28px] leading-[42px] mob1:text-[24px]">
+                        {dataItem.title}
+                      </div>
+                      <div className="text-[#3D3D3D] font-normal leading-5 mob1:text-[16px]">
+                        {dataItem.type}
+                      </div>
+                    </div>
+                    <div className="mob1:text-[16px]">
+                      {dataItem.description}
+                    </div>
+                  </div>
+                
+              ))}
+            </div>
+            <div className="grid grid-cols-4 gap-5 mb-[72px] lg:grid-cols-3 md1:grid-cols-2 sm:grid-cols-1">
+              {technicalProject.map((dataItem, index) => (
+                
+                  <div
+                    className={`flex flex-col gap-4 rounded h-fit p-8 mob1:p-3 text-black font-normal text-[20px] leading-[30px] mob1:leading-6 relative `}
+                    key={index}
+                    style={{ backgroundColor: dataItem.colour }}
+                  >
+                    <div className="flex flex-col gap-2">
+                      <div className="text-[28px] leading-[42px] mob1:text-[24px]">
+                        {dataItem.title}
+                      </div>
+                      <div className="text-[#3D3D3D] font-normal leading-5 mob1:text-[16px]">
+                        {dataItem.type}
+                      </div>
+                    </div>
+                    <div className="mob1:text-[16px]">
+                      {dataItem.description}
+                    </div>
+                  </div>
+                
+              ))}
+            </div>
+            <div className="grid grid-cols-4 gap-5 mb-[72px] lg:grid-cols-3 md1:grid-cols-2 sm:grid-cols-1">
+              {technicalEstimation.map((dataItem, index) => (
+                
+                  <div
+                    className={`flex flex-col gap-4 rounded h-fit p-8 mob1:p-3 text-black font-normal text-[20px] leading-[30px] mob1:leading-6 relative `}
+                    key={index}
+                    style={{ backgroundColor: dataItem.colour }}
+                  >
+                    <div className="flex flex-col gap-2">
+                      <div className="text-[28px] leading-[42px] mob1:text-[24px]">
+                        {dataItem.title}
+                      </div>
+                      <div className="text-[#3D3D3D] font-normal leading-5 mob1:text-[16px]">
+                        {dataItem.type}
+                      </div>
+                    </div>
+                    <div className="mob1:text-[16px]">
+                      {dataItem.description}
+                    </div>
+                  </div>
+                
+              ))}
+            </div>
+           
+          </div>
         </div>
       </FadeInSection>
     </div>

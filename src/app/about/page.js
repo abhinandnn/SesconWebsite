@@ -58,7 +58,11 @@ function Home() {
   }, []);
 
   if (!data) {
-    return <div>Loading...</div>;
+    return  <div className="flex flex-col gap-3 select-none">
+    <div className="w-full mt-4 flex justify-center items-center">
+      <div className="linear-loader"></div> {/* Loader animation */}
+    </div>
+  </div>;
   }
 
 
@@ -90,7 +94,7 @@ function Home() {
 
       <FadeInSection>
         <div className="bg-white pt-[4.5rem] px-[4vw] font-normal flex gap-[6rem] lg:flex-col lg:gap-5">
-          <div className="text-[2.5rem] mob1:text-[24px] leading-none w-[8rem] min-w-fit text-[#B33F0F] pt-1">
+          <div className="text-[2.5rem] mob1:text-[24px] leading-none w-[8rem] min-w-fit text-[#A9441B] pt-1">
             ABOUT COMPANY
           </div>
           <div className="text-[2rem] mob1:text-[18px]">
@@ -122,7 +126,7 @@ function Home() {
       </FadeInSection>
       <FadeInSection>
         <div className="bg-white pt-[4.5rem] px-[4vw] flex gap-[6rem] lg:flex-col lg:gap-5">
-          <div className="text-[2.5rem] leading-none w-[8rem] mob1:text-[24px] min-w-fit text-[#B33F0F] pt-2">
+          <div className="text-[2.5rem] leading-none w-[8rem] mob1:text-[24px] min-w-fit text-[#A9441B] pt-2">
             OUR MISSION
           </div>
           <div className="text-[2rem] mob1:text-[18px]">
@@ -149,7 +153,7 @@ function Home() {
         </div>
       </FadeInSection>
       <FadeInSection>
-        <div className="w-11/12 mt-[72px] mx-auto flex flex-col gap-[63px] mob1:gap-10 text-[#B33F0F] font-normal">
+        <div className="w-11/12 mt-[72px] mx-auto flex flex-col gap-[63px] mob1:gap-10 text-[#A9441B] font-normal">
           <div className="text-[2.5rem] leading-[60px] mob1:text-[24px] mob1:leading-9">
             WHAT MAKE US STAND OUT
           </div>
@@ -195,7 +199,7 @@ function Home() {
       </FadeInSection>
       <FadeInSection>
         <div className="w-11/12 mx-auto pt-[3rem] mob1:pt-0  flex gap-[4rem] pb-9">
-          <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem]  leading-none w-[8rem] min-w-fit text-[#B33F0F]">
+          <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem]  leading-none w-[8rem] min-w-fit text-[#A9441B]">
             EQUIPMENTS TOOLS AND PLANTS
           </div>
         </div>

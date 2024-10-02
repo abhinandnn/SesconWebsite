@@ -63,7 +63,7 @@ export default function Ongoing() {
       <FadeInSection>
         {!showAll && (
           <div
-            className=" flex mt-[-72px]  mb-[72px] flex-col gap-2 text-[#B33F0F] mx-auto cursor-pointer text-[22px] font-medium"
+            className=" flex mt-[-72px]  mb-[72px] flex-col gap-2 text-[#A9441B] mx-auto cursor-pointer text-[22px] font-medium"
             onClick={handleShowMore}
           >
             <div className="text-center ">Show more</div>

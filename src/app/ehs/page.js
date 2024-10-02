@@ -33,7 +33,7 @@ function Home() {
         </div>
       </div>
       <div className="bg-white pt-[4.5rem] px-[4vw] mob:px-[6vw] flex gap-[4rem] lg:flex-col lg:gap-5">
-        <div className="text-[2.5rem] sm:text-[1.5rem] text-[#B33F0F] mob1:text-[24px]">
+        <div className="text-[2.5rem] sm:text-[1.5rem] text-[#A9441B] mob1:text-[24px]">
           ENVIRONMENT HEALTH AND SAFETY POLICY
         </div>
         <div className="pl-[3rem] mb-[4rem] flex flex-col gap-[1rem]">
@@ -75,12 +75,12 @@ function Home() {
         </div>
       </div>
       <div className=" flex flex-col px-[4vw] mob:px-[6vw] mb-[4rem] gap-[4rem]">
-        <div className="text-[2.5rem] mob1:text-[1.5rem]  text-[#B33F0F]">
+        <div className="text-[2.5rem] mob1:text-[1.5rem]  text-[#A9441B]">
           SESCON BUILDERS SAFETY ORGANISATION
         </div>
         <img src="/SBSO.svg" />
       </div>
-      <div className=" px-[4vw] mob:px-[6vw] pb-2  text-[1.5rem] text-[#B33F0F] font-normal">
+      <div className=" px-[4vw] mob:px-[6vw] pb-2  text-[1.5rem] text-[#A9441B] font-normal">
         {ehsData.map((item, index) => (
           <div
             className={`flex relative justify-between mb-[74px] lg:flex-col ${

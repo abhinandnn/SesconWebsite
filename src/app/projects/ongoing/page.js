@@ -33,7 +33,7 @@ function Home() {
         </div>
       </div>
       <div className="bg-white pt-[4.5rem] mini1:pt-[2rem] mob:px-[6vw] px-[4vw] mini1:flex-col mini1:gap-4 flex justify-between">
-        <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem] leading-none w-[8rem] min-w-fit text-[#B33F0F]">
+        <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem] leading-none w-[8rem] min-w-fit text-[#A9441B]">
           Ongoing Projects
         </div>
         <div className="text-[1.75rem] sm:text-[1.5rem] mob:text-[1.125rem]">

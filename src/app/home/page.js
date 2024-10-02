@@ -63,9 +63,14 @@ function Home() {
   }, []);
 
   if (!data) {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex flex-col gap-3 select-none">
+        <div className="w-full mt-4 flex justify-center items-center">
+          <div className="linear-loader"></div> {/* Loader animation */}
+        </div>
+      </div>
+    );
   }
-
 
   const heroImages = data.attributes.hero_section_imgs.data.map(
     (img) => img.attributes.url
@@ -80,33 +85,28 @@ function Home() {
   );
   return (
     <div className="font-lexend h-fit">
-        <div className="h-[92vh] mob:h-[60vh] bg-transparent text-white">
-          <BackgroundSlider
-            images={heroImages}
-            duration={4}
-            transition={2}
-          />
-          <div className="px-[4vw] mob:px-[6vw]">
-            <div className="text-[2rem] mob:text-[1.25rem] sm:text-[1.5rem] lg1:text-[1.75rem] pt-[5rem]">
-              We Build Your
-            </div>
-            <div className="text-[10rem] mini1:text-[4.75rem] ] mob:text-[6.25rem] sm:text-[7.25rem] lg1:text-[8.375rem] leading-none font-bold">
-              Dreams
-            </div>
-            <div className="text-[2rem] mob:text-[1.25rem] sm:text-[1.5rem] lg1:text-[1.75rem]">
-              We deliver what we commit and we commit what we can deliver
-            </div>
+      <div className="h-[92vh] mob:h-[60vh] bg-transparent text-white">
+        <BackgroundSlider images={heroImages} duration={4} transition={2} />
+        <div className="px-[4vw] mob:px-[6vw]">
+          <div className="text-[2rem] mob:text-[1.25rem] sm:text-[1.5rem] lg1:text-[1.75rem] pt-[5rem]">
+            We Build Your
+          </div>
+          <div className="text-[10rem] mini1:text-[4.75rem] ] mob:text-[6.25rem] sm:text-[7.25rem] lg1:text-[8.375rem] leading-none font-bold">
+            Dreams
+          </div>
+          <div className="text-[2rem] mob:text-[1.25rem] sm:text-[1.5rem] lg1:text-[1.75rem]">
+            We deliver what we commit and we commit what we can deliver
           </div>
         </div>
-      
+      </div>
 
       <FadeInSection>
         <div className="bg-white  md1:flex-col md1:gap-[3rem] mob:gap-[2rem] pt-[4.5rem] mob:px-[6vw] px-[4vw] flex gap-[6rem]">
-          <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem] mini1:text-[24px] leading-none w-[8rem] min-w-fit text-[#B33F0F]">
+          <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem] mini1:text-[24px] leading-none w-[8rem] min-w-fit text-[#A9441B]">
             ABOUT US
           </div>
           <div className="text-[2rem] sm:text-[1.5rem] mob:text-[1.15rem]">
-           {aboutUsText}
+            {aboutUsText}
           </div>
         </div>
       </FadeInSection>
@@ -151,7 +151,7 @@ function Home() {
           </div>
           <div className="flex flex-col gap-[4rem]">
             <div>
-              <div className="font-bold leading-tight text-[#B33F0F] mob:text-[4.5rem] sm:text-[5.125rem] lg1:text-[5.875rem] text-[7.5rem]">
+              <div className="font-bold leading-tight text-[#A9441B] mob:text-[4.5rem] sm:text-[5.125rem] lg1:text-[5.875rem] text-[7.5rem]">
                 20+
               </div>
               <div className="font-bold text-[2.5rem] mob:text-[1.5rem] sm:text-[1.75rem] lg1:text-[2rem] pb-6 border-b border-black">
@@ -159,7 +159,7 @@ function Home() {
               </div>
             </div>
             <div>
-              <div className="font-bold mob:text-[4.5rem] sm:text-[5.125rem] lg1:text-[5.875rem] leading-tight text-[#B33F0F] text-[7.5rem]">
+              <div className="font-bold mob:text-[4.5rem] sm:text-[5.125rem] lg1:text-[5.875rem] leading-tight text-[#A9441B] text-[7.5rem]">
                 120+
               </div>
               <div className="font-bold text-[2.5rem] mob:text-[1.5rem] sm:text-[1.75rem] lg1:text-[2rem] pb-6 border-b border-black">
@@ -172,7 +172,7 @@ function Home() {
 
       <FadeInSection>
         <div className="pt-[3rem] w-11/12 mx-auto  flex gap-[4rem] pb-9">
-          <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem]  leading-none w-[8rem] min-w-fit text-[#B33F0F]">
+          <div className="text-[2.5rem] sm:text-[2rem] mob:text-[1.5rem]  leading-none w-[8rem] min-w-fit text-[#A9441B]">
             FEATURED PROJECTS
           </div>
         </div>
@@ -183,7 +183,7 @@ function Home() {
         <div className="w-11/12 mx-auto pb-[5rem] pt-[3rem]">
           <Carousel responsive={responsive}>
             {projectCards.map((project) => (
-            <ProjectCard card={project} />
+              <ProjectCard card={project} />
             ))}
           </Carousel>
         </div>
@@ -196,11 +196,11 @@ function Home() {
         <Available />
       </FadeInSection>
       <FadeInSection>
-        <Clients clients={clientImages}/>
+        <Clients clients={clientImages} />
       </FadeInSection>
       <FadeInSection>
         {" "}
-        <FAQ QnA={data.attributes.QnA}/>
+        <FAQ QnA={data.attributes.QnA} />
       </FadeInSection>
       <FadeInSection>
         <Reach section="Home" />
